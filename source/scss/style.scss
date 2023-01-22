@@ -16,7 +16,20 @@
   Import all other blocks
 */
 @import "_blocks/container";
+@import "_blocks/header";
 @import "_blocks/footer";
+@import "_blocks/popup";
+@import "_blocks/banner";
+@import "_blocks/breadcrumbs";
+@import "_blocks/partners";
+@import "_blocks/navigation.scss";
+@import "_blocks/blog__item.scss";
+@import "catalog";
+@import "toys";
+@import "blog";
+@import "contact";
+@import "_blocks/fonts";
+
 
 /*
   Ниже пример подключения других блоков
@@ -29,32 +42,222 @@
   block-name__element-name--modificator
 */
 
-/*
-  Код ниже нужно удалить, он добавлен просто для примера
-  Не стал выносить в отдельный файл, но если бы блок coming-soon действительно был бы нужен,
-  то он должен был бы быть в файле _blocks/coming-soon.scss
-*/
+/*** Category Products ***/
 
-.coming-soon {
-  color: $color-text;
+.products {
+  margin-top: 90px;
+  margin-bottom: 91px;
+}
+
+.products__list {
+  margin-top: 30px;
   display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  min-height: calc(100vh - 100px);
-  margin: auto;
-  padding: 0 5vw;
+  max-width: 1180px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* gap: 20px; */  
+}
 
-  &__title {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-    font-size: 25vw;
-    font-weight: 400;
-    margin: 0 auto;
-    text-transform: uppercase;
-    width: 100%;
-  }
+.products__item {
+  position: relative;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  width: 280px;
+  height: 270px;
+}
+
+.products__item.item_1 {
+  background-color: #DBE4DB;
+}
+
+.products__item.item_2 {
+  background-color: #EADDD3;
+}
+
+.products__item.item_3 {
+  background-color: #F8F2DA;
+}
+.products__item.item_4 {
+  background-color: #D5D4E1;
+}
+
+.products__item-img {
+  z-index: 0;
+}
+
+.products__link {
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 190px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 32px;
+  text-align: center;
+  color: #FFFFFF;
+  text-shadow: 0px 0px 40px rgba(147, 3, 3, 0.25);
+  z-index: 1;
+}
+
+.products__link:active, .products__link:hover {
+  cursor:pointer;
+  text-decoration-line: underline;
+}
+
+.products__nav_wrapper {
+  display: flex;
+  margin: 33px 0 0;
+}
+
+.button-paginator {
+  width: 38px;
+  height: 37px;
+  border: none;
+  background-color: rgba(112, 187, 220, 0.2)
+}
+
+.btn-vector > path:hover {
+  cursor: pointer;
+  stroke: #C29974;
+}
+
+.btn-vector > path:active {
+  stroke: rgba(194, 153, 116);
+  opacity: 0.7; 
+}
+
+.btn-vector > path:disabled {
+  stroke: rgba(30, 6, 6);
+  opacity: 0.12; 
+}
+
+
+.products__info {
+  padding-left: 20px;
+  margin: 0;
+  max-width: 580px;
+  line-height: 20px;
+}
+
+/*** SERVICES: DELIVERY ***/
+
+.services {
+  padding: 0 210px 0 110px;
+  max-width: 1080px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.services__photo {
+  background: rgba(112, 187, 220, 0.1);
+}
+
+.services__info-wrapper {
+  padding-top: 33px;
+  max-width: 480px;
+}
+
+.services__info-title {
+  margin-bottom: 3px;
+}
+
+.services__info-item {
+  margin-left: -60px;
+  max-width: 326px;
+  height: 55px;
+}
+
+.services__info-item:hover {
+  background: rgba(112, 187, 220, 0.1);
+  cursor: pointer;
+}
+
+.services__info-item.item--active {
+  background: rgba(112, 187, 220, 0.2);
+}
+
+.services__link {
+  font-family: 'Crimson Text', serif;
+  font-style: italic;
+  font-size: 26px;
+  line-height: 58px;
+  padding-left: 60px;
+}
+
+.services__link.link--active {
+  font-weight: bold;
+  font-size: 28px;
+}
+
+.info__delivery-box {
+  margin-top: 20px;
+}
+
+.info__delivery {
+  box-sizing: content-box;
+  line-height: 22px;
+  padding-bottom: 18px;
+}
+
+.services__info-link {
+  margin-top: 5px;
+  max-width: 149px;
+  letter-spacing: 1px;
+}
+
+/*** DLK CONTACTS ***/
+
+.two-column {
+  padding-top: 27px;
+  display: flex;
+  margin-bottom: 155px;
+}
+
+.about {
+  max-width: 543px;
+  min-height: 228px;
+  background-color:#E1F0F7;
+  margin-right: 56px;
+}
+
+
+.about__link {
+  margin-left: 30px;
+  font-family: 'Crimson Text';
+  font-style: italic;
+  font-size: 26px;
+  line-height: 48px;
+}
+
+.about__info {
+  margin: 5px 30px;
+}
+
+.buy-link {
+  margin-top: 20px;
+  margin-left: 30px;
+  width: 123px;
+  letter-spacing: 1px;
+}
+
+.about__title, .contacts__title {
+  margin-left: 30px;
+  margin-top: -25px;
+}
+
+.contacts {
+  width: 543px;
+  height: 209px;
+  background-color:#E1F0F7;
+}
+
+.contacts__info {
+  margin: 20px 30px;
+}
+
+.contacts__map {
+  margin: 10px 30px;
 }

@@ -1,23 +1,100 @@
-html {
-  box-sizing: border-box;
-  text-size-adjust: none;
-  -webkit-tap-highlight-color: transparent;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-html,
-body {
-  background-color: $color-bg;
-  color: $color-text;
-  font-family: $font-base-family;
-  height: 100%;
+* {
   margin: 0;
-  min-height: 100%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+}
+
+body {
+  color: #1E0606;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: #1E0606;
+}
+
+h1, h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 40px;
+  line-height: 44px;
+}
+
+h2 {
+  font-size: 38px;
+  line-height: 46px;
+  color: #1E0606;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #1E0606;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+}
+
+button {
+  border-style: none;
+}
+
+label {
+cursor: pointer;
+}
+
+.visually-hidden, .popup.hidden {
+  display: none;
+}
+
+.button {
+  border: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  line-height: 22px;
+  color: #FFFFFF;
+  min-height: 40px;
+  background: #000000;
+}
+
+.button:hover {
+  cursor: pointer;
+  background: #C29974;
+}
+
+.button:active {
+  background: #CFAF91;
+}
+
+.button:disabled {
+  background: #C7C1C1;
+}
+
+.no-scroll {
+  overflow: hidden;
 }

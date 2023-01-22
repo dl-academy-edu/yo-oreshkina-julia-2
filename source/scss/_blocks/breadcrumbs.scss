@@ -1,0 +1,32 @@
+.breadcrumbs {
+    display: flex;
+    flex-direction: row;
+    gap: 48px;
+  }
+  .breadcrumbs__item {
+    position: relative;
+  }
+  .breadcrumbs__link {
+    font-family: 'Crimson Text';
+    font-style: italic;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 26px;
+    color: #1E0606;
+  }
+  
+  .breadcrumbs > li:last-child {
+    opacity: 0.5;
+  } 
+  
+  .breadcrumbs > li:not(:last-child)::after{
+    content: ' ';
+    position: absolute;
+    top: 25%;
+    left: 144%;
+    width: 8px;
+    height: 12px;
+    background-image:url('../img/icons/vector-breadcrumbs.svg');
+    background-size:contain;
+    background-repeat: no-repeat;
+  }

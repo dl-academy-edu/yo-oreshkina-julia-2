@@ -1,0 +1,33 @@
+.blog__item {
+    max-width: 380px;
+}
+
+.blog__item-img {
+    margin-bottom: 20px;
+}
+
+.blog__item-date {
+    margin-bottom: 7px;
+    color: #818181;
+}
+
+.blog__item-title {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 31px;
+    color: #1E0606;
+}
+
+.blog__item-title:hover, .blog__item-title:active {
+    text-decoration-line: underline;
+}
+
+.blog__item-text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    line-height: 25px;
+    color: #1E0606;
+    margin-top: 15px;
+}
