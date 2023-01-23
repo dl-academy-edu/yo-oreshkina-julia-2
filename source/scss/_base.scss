@@ -62,39 +62,3 @@ button {
 label {
 cursor: pointer;
 }
-
-.visually-hidden, .popup.hidden {
-  display: none;
-}
-
-.button {
-  border: none;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-transform: uppercase;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: bold;
-  line-height: 22px;
-  color: #FFFFFF;
-  min-height: 40px;
-  background: #000000;
-}
-
-.button:hover {
-  cursor: pointer;
-  background: #C29974;
-}
-
-.button:active {
-  background: #CFAF91;
-}
-
-.button:disabled {
-  background: #C7C1C1;
-}
-
-.no-scroll {
-  overflow: hidden;
-}

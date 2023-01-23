@@ -30,7 +30,11 @@
               <p class="footer__connect title">Connect</p>
               <form class="connect__form" method="post">
                   <input class="connect__input" type="email" name="email" placeholder="Email">
-                  <button class="button connect__btn" type="submit">Join</button>
+                  @@include('blocks/button.html',
+                    {"additionalclass": "connect__btn",
+                    "buttonType": "submit",
+                    "buttonName": "Join",
+                    "buttonTab": "false"})
               </form>
               <ul class="footer__connect-list">
                   <li class="footer__connect-item"><a class="footer__connect-link icon-facebook" href="https://facebook.com/" aria-label="share on facebook"></a></li>

@@ -12,7 +12,11 @@
         <div class="banner__slide">
             <h1 class="banner__slide-title">THE OOH NOO COLLECTION</h1>
             <p class="banner__slide-info">Designed in Slovenia</p>
-            <button class="button banner__btn" type="button">EXPLORE NOW</button>
+            @@include('blocks/button.html',
+            {"additionalclass": "banner__btn",
+            "buttonType": "button",
+            "buttonName": "explore now",
+            "buttonTab": "false"})
         </div>
         <img class="banner__slide-img" src="./img/monster.png" alt="monster">
         <p class="banner__delivery-info">FREE (CONTIENENTAL) USA SHIPPING ON ALL ORDERS OFf $100 USD OR MORE!</p>

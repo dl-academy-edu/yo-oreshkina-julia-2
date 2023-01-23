@@ -59,7 +59,11 @@
                         By clicking on the button, you consent to the processing of your personal data
                     </label>
                 </div>
-                <button class="button submit__btn" type="submit">submit</button>
+                @@include('blocks/button.html',
+                    {"additionalclass": "submit__btn",
+                    "buttonType": "submit",
+                    "buttonName": "submit",
+                    "buttonTab": "false"})
             </form>
             <section class="contact__info">
                 <h2 class="visually-hidden">Information about a support group</h2>

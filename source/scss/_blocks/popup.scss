@@ -137,7 +137,7 @@
   }
   
   .submit__btn {
-    min-width: 106px;
+    padding: 0 22px;
     margin-right: auto;
   }
   
@@ -159,3 +159,10 @@
     opacity: 0.4;
   }
   
+  .visually-hidden, .popup.hidden {
+    display: none;
+  }
+  
+  .no-scroll {
+    overflow: hidden;
+  }

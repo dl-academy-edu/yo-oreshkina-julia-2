@@ -18,6 +18,7 @@
 @import "_blocks/container";
 @import "_blocks/header";
 @import "_blocks/footer";
+@import "_blocks/button";
 @import "_blocks/popup";
 @import "_blocks/banner";
 @import "_blocks/breadcrumbs";
@@ -54,7 +55,6 @@
   display: flex;
   max-width: 1180px;
   flex-wrap: wrap;
-  justify-content: space-between;
   /* gap: 20px; */  
 }
 
@@ -187,7 +187,7 @@
   padding-left: 60px;
 }
 
-.services__link.link--active {
+.services__link.link-open {
   font-weight: bold;
   font-size: 28px;
 }

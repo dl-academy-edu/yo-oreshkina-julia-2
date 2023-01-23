@@ -96,7 +96,11 @@
                 </div>
             </div>
             </fieldset>
-            <button class="button filter__apply" type="submit">Apply</button>     
+            @@include('blocks/button.html',
+                    {"additionalclass": "filter__apply",
+                    "buttonType": "submit",
+                    "buttonName": "Apply",
+                    "buttonTab": "false"})    
         </form>
     </section>
     <main class="container">
