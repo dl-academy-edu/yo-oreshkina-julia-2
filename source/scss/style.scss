@@ -17,6 +17,7 @@
 */
 @import "_blocks/container";
 @import "_blocks/header";
+@import "_blocks/header__menu__item";
 @import "_blocks/footer";
 @import "_blocks/button";
 @import "_blocks/popup";
@@ -29,7 +30,7 @@
 @import "toys";
 @import "blog";
 @import "contact";
-@import "_blocks/fonts";
+@import "fonts";
 
 
 /*
@@ -204,7 +205,7 @@
 
 .services__info-link {
   margin-top: 5px;
-  max-width: 149px;
+  width: 22%;
   letter-spacing: 1px;
 }
 
@@ -239,7 +240,7 @@
 .buy-link {
   margin-top: 20px;
   margin-left: 30px;
-  width: 123px;
+  width: 15%;
   letter-spacing: 1px;
 }
 
