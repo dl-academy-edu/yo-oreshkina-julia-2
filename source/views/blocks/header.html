@@ -3,16 +3,16 @@
         <img class="header__logo" src="./img/icons/dlk-logo.svg" alt="DLK logo">
     </a>
     <nav class="header__menu">
-        <ul class="header__menu-list">
-            <li class="header__menu-item">
-                <a class="header__menu-link" href="/blog.html" target="_blank">BLOG</a>
-            </li>
-            <li class="header__menu-item">
-                <a class="header__menu-link" href="/catalog.html" target="_blank">CATALOG</a>
-            </li>
-            <li class="header__menu-item">
-                <a class="header__menu-link" href="#">ABOUT US</a>
-            </li>
+        <ul class="header__menu__list">
+            @@include('blocks/header__menu__item.html',
+            {"menuLink": "/blog.html",
+            "menuLinkName": "BLOG"})
+            @@include('blocks/header__menu__item.html',
+            {"menuLink": "/catalog.html",
+            "menuLinkName": "CATALOG"})
+            @@include('blocks/header__menu__item.html',
+            {"menuLink": "#",
+            "menuLinkName": "ABOUT US"})
         </ul>
     </nav>
     <a class="header__contact-link icon-search" href="/contact.html">CONTACT US</a>

@@ -1,0 +1,9 @@
+.menu__item {
+  padding-left: 20px;
+  &__link:hover {
+    opacity: 0.4;
+  }
+  &__link:active {
+    opacity: 0.2;
+  }
+} 

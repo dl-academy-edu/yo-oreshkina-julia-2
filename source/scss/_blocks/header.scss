@@ -1,39 +1,18 @@
-
-.header__menu-link:hover, .header > a:hover {
-    opacity: 0.4;
-  }
-  
-  .header__menu-link:active, .header > a:active {
-    opacity: 0.2;
-  }
-  
-  .header { 
-    margin-top: 50px;
-    margin-bottom: 60px;
-    display: flex;
-    flex: 0 1 auto;
-  }
-  
-  .indent {
-    margin-bottom: 60px;
-  }
-  
-  .header__menu {
+.header { 
+  margin-top: 50px;
+  margin-bottom: 60px;
+  display: flex;
+  flex: 0 1 auto;
+  &__menu {
     display: flex;
     align-items:center;
     padding-left: 40px;
     flex-grow: 1;
+    &__list {
+      display: flex; 
+    }
   }
-  
-  .header__menu-list {
-    display: flex; 
-  }
-  
-  .header__menu-item {
-    padding-left: 20px;
-  }
-    
-  .header__contact-link {
+  &__contact-link {
     font-weight: bold;
     font-style: normal;
     line-height: 20px;
@@ -41,8 +20,7 @@
     display: flex;
     align-items: center;
   }
-  
-  .header__contact-link:before {
+  &__contact-link:before {
     content: " ";
     display: block;
     width: 18px;
@@ -52,3 +30,11 @@
     background-repeat: no-repeat;
     background-size: 18px 18px;
   }
+}
+// Имеет ли смысл запись ниже передавать через переменные?
+.header > a:hover {
+  opacity: 0.4;
+}
+.header > a:active {
+  opacity: 0.2;
+}
