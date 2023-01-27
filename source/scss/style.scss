@@ -20,6 +20,7 @@
 @import "_blocks/header__menu__item";
 @import "_blocks/footer";
 @import "_blocks/button";
+@import "_blocks/link";
 @import "_blocks/popup";
 @import "_blocks/banner";
 @import "_blocks/breadcrumbs";
@@ -57,11 +58,16 @@
     flex-wrap: wrap;
     gap: 20px;  
   }
-}
-
-.products__nav_wrapper {
-  display: flex;
-  margin: 33px 0 0;
+  &__nav {
+    display: flex;
+    margin: 33px 0 0;
+  }
+  &__info {
+    padding-left: 20px;
+    margin: 0;
+    max-width: 580px;
+    line-height: 20px;
+  }
 }
 
 .button-paginator {
@@ -86,14 +92,6 @@
   opacity: 0.12; 
 }
 
-
-.products__info {
-  padding-left: 20px;
-  margin: 0;
-  max-width: 580px;
-  line-height: 20px;
-}
-
 /*** SERVICES: DELIVERY ***/
 
 .services {
@@ -101,63 +99,54 @@
   max-width: 1080px;
   display: flex;
   justify-content: space-between;
+  &__photo {
+    background: rgba(112, 187, 220, 0.1);
+  }
+  &__inner {
+    padding-top: 33px;
+    max-width: 480px;
+  }
+  &__title {
+    margin-bottom: 3px;
+  }
+  &__list {
+    max-width: 267px;
+  }
+  &__item {
+    margin-left: -60px;
+    height: 55px;
+  }
+  &__item:hover {
+    background: rgba(112, 187, 220, 0.1);
+    cursor: pointer;
+  }
+  &__item--active {
+    background: rgba(112, 187, 220, 0.2);
+  }
+  &__link {
+    font-family: 'Crimson Text', serif;
+    font-style: italic;
+    font-size: 26px;
+    line-height: 58px;
+    padding-left: 60px;
+  }
+  &__link--open {
+    font-weight: bold;
+    font-size: 28px;
+  }
+  &__content {
+    margin-top: 20px;
+  }
+  &__delivery {
+    box-sizing: content-box;
+    line-height: 22px;
+    padding-bottom: 18px;
+  }
 }
 
-.services__photo {
-  background: rgba(112, 187, 220, 0.1);
-}
-
-.services__info-wrapper {
-  padding-top: 33px;
-  max-width: 480px;
-}
-
-.services__info-title {
-  margin-bottom: 3px;
-}
-
-.services__info-item {
-  margin-left: -60px;
-  max-width: 326px;
-  height: 55px;
-}
-
-.services__info-item:hover {
-  background: rgba(112, 187, 220, 0.1);
-  cursor: pointer;
-}
-
-.services__info-item.item--active {
-  background: rgba(112, 187, 220, 0.2);
-}
-
-.services__link {
-  font-family: 'Crimson Text', serif;
-  font-style: italic;
-  font-size: 26px;
-  line-height: 58px;
-  padding-left: 60px;
-}
-
-.services__link.link-open {
-  font-weight: bold;
-  font-size: 28px;
-}
-
-.info__delivery-box {
-  margin-top: 20px;
-}
-
-.info__delivery {
-  box-sizing: content-box;
-  line-height: 22px;
-  padding-bottom: 18px;
-}
-
-.services__info-link {
+.services__link-more {
   margin-top: 5px;
   width: 22%;
-  letter-spacing: 1px;
 }
 
 /*** DLK CONTACTS ***/
@@ -168,48 +157,41 @@
   margin-bottom: 155px;
 }
 
+.title {
+  margin-left: 30px;
+  margin-top: -25px;
+}
+
 .about {
   max-width: 543px;
   min-height: 228px;
   background-color:#E1F0F7;
   margin-right: 56px;
-}
-
-
-.about__link {
-  margin-left: 30px;
-  font-family: 'Crimson Text';
-  font-style: italic;
-  font-size: 26px;
-  line-height: 48px;
-}
-
-.about__info {
-  margin: 5px 30px;
-}
-
-.buy-link {
-  margin-top: 20px;
-  margin-left: 30px;
-  width: 15%;
-  letter-spacing: 1px;
-}
-
-.about__title, .contacts__title {
-  margin-left: 30px;
-  margin-top: -25px;
+  &__link {
+    margin-left: 30px;
+    font-family: 'Crimson Text';
+    font-style: italic;
+    font-size: 26px;
+    line-height: 48px;
+  }
+  &__info {
+    margin: 5px 30px;
+  }
+  &__buy-link {
+    margin-top: 20px;
+    margin-left: 30px;
+    width: 15%;
+  }
 }
 
 .contacts {
   width: 543px;
   height: 209px;
   background-color:#E1F0F7;
-}
-
-.contacts__info {
-  margin: 20px 30px;
-}
-
-.contacts__map {
-  margin: 10px 30px;
+  &__info {
+    margin: 20px 30px;
+  }
+  &__map {
+    margin: 10px 30px;
+  }
 }

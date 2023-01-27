@@ -1,0 +1,27 @@
+.link {
+  padding: 0 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  line-height: 22px;
+  letter-spacing: 1px;
+  color: #FFFFFF;
+  min-height: 40px;
+  background: #000000;
+}
+
+.link:hover {
+  background: #C29974;
+}
+
+.link:active {
+  background: #CFAF91;
+}
+
+.link:disabled {
+  background: #C7C1C1;
+}
+
