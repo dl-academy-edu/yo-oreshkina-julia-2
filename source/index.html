@@ -27,22 +27,30 @@
     <section class="products container">
         <h2 class="products__title">Category Products</h2>
         <ul class="products__list">
-            <li class="products__item item_1">
-                <img class="products__item-img" src="./img/apparel-kids.png" alt="apparel kids" width="280" height="270">
-                <a class="products__link" href="#">APPAREL KIDS</a>
-            </li>
-            <li class="products__item item_2">
-                <img class="products__item-img" src="./img/sock.png" alt="holiday shop" width="208" height="244">
-                <a class="products__link" href="#">HOLIDAY SHOP</a>
-            </li>
-            <li class="products__item item_3">
-                <img class="products__item-img" src="./img/toy.png" alt="toys" width="270" height="270">
-                <a class="products__link" href="./toys.html">TOYS</a>
-            </li>
-            <li class="products__item item_4">
-                <img class="products__item-img" src="./img/drowing.png" alt="accessories" width="240" height="250">
-                <a class="products__link" href="#">ACCESSORIES</a>
-            </li>
+            @@include('blocks/products-card.html',
+            {"cardColor": "card_1",
+            "cardImg": "./img/apparel-kids.png",
+            "cardAlt": "apparel kids",
+            "cardLink": "#",
+            "cardName": "apparel kids"})
+            @@include('blocks/products-card.html',
+            {"cardColor": "card_2",
+            "cardImg": "./img/sock.png",
+            "cardAlt": "holiday shop",
+            "cardLink": "#",
+            "cardName": "holiday shop"})
+            @@include('blocks/products-card.html',
+            {"cardColor": "card_3",
+            "cardImg": "./img/toy.png",
+            "cardAlt": "toys",
+            "cardLink": "./toys.html",
+            "cardName": "toys"})
+            @@include('blocks/products-card.html',
+            {"cardColor": "card_4",
+            "cardImg": "./img/drowing.png",
+            "cardAlt": "accessories",
+            "cardLink": "#",
+            "cardName": "accessories"})
         </ul>
         <div class="products__nav_wrapper">
             <nav class="products__nav" aria-label="list of product categories">
