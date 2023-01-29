@@ -1,35 +1,59 @@
 <footer class="footer">
   <div class="container">
-      <div class="free-column wrapper ">
-          <section class="footer__nav column">
+      <div class="footer__free-columns">
+          <section class="footer__column">
               <h2 class="visually-hidden">Navigation</h2>
-              <p class="footer__nav-list subtitle">Navigation</p>
-              <ul class="footer__nav-list">
-                  <li class="footer__item"><a class="footer__link" href="#">About Us</a></li>
-                  <li class="footer__item"><a class="footer__link" href="./blog.html">Blog</a></li>
-                  <li class="footer__item"><a class="footer__link" href="#">Design Services</a></li>
-                  <li class="footer__item"><a class="footer__link" href="#">Featured On</a></li>
-                  <li class="footer__item"><a class="footer__link" href="#">2018 Holiday Catalog</a></li>
-                  <li class="footer__item"><a class="footer__link" href="#">Shop By Designer</a></li>
+              <p class="footer__subtitle">Navigation</p>
+              <ul class="footer__list">
+                @@include('blocks/footer__item.html',
+                {"footerLinkPath": "#",
+                "footerLinkname": "About Us"})
+                @@include('blocks/footer__item.html',
+                {"footerLinkPath": "./blog.html",
+                "footerLinkname": "Blog"})
+                @@include('blocks/footer__item.html',
+                {"footerLinkPath": "#",
+                "footerLinkname": "Design Services"})
+                @@include('blocks/footer__item.html',
+                {"footerLinkPath": "#",
+                "footerLinkname": "Featured On"})
+                @@include('blocks/footer__item.html',
+                {"footerLinkPath": "#",
+                "footerLinkname": "2018 Holiday Catalog"})
+                @@include('blocks/footer__item.html',
+                {"footerLinkPath": "#",
+                "footerLinkname": "Shop By Designer"})
               </ul>
           </section>
-          <section class="footer__info column">
+          <section class="footer__column">
               <h2 class="visually-hidden">Customer Information</h2>
-              <p class="footer__info subtitle">Customer Information</p>
-              <ul class="footer__info_list">
-                  <li class="footer__item"><a class="footer__link" href="#">Contact Us</a></li>
-                  <li class="footer__item"><a class="footer__link" href="#">Sale Exclusions</a></li>
-                  <li class="footer__item"><a class="footer__link" href="#">Shipping & Returns</a></li>
-                  <li class="footer__item"><a class="footer__link" href="#">Terms & Conditions</a></li>
-                  <li class="footer__item"><a class="footer__link" href="#">Privacy Policy</a></li>
-                  <li class="footer__item"><a class="footer__link" href="#">Search</a></li>
+              <p class="footer__subtitle">Customer Information</p>
+              <ul class="footer__list">
+                @@include('blocks/footer__item.html',
+                {"footerLinkPath": "./contact.html",
+                "footerLinkname": "Contact Us"})
+                @@include('blocks/footer__item.html',
+                {"footerLinkPath": "#",
+                "footerLinkname": "Sale Exclusions"})
+                @@include('blocks/footer__item.html',
+                {"footerLinkPath": "#",
+                "footerLinkname": "Shipping & Returns"})
+                @@include('blocks/footer__item.html',
+                {"footerLinkPath": "#",
+                "footerLinkname": "Terms & Conditions"})
+                @@include('blocks/footer__item.html',
+                {"footerLinkPath": "#",
+                "footerLinkname": "Privacy Policy"})
+                @@include('blocks/footer__item.html',
+                {"footerLinkPath": "#",
+                "footerLinkname": "Search"})
               </ul>
           </section>
-          <section class="column">
+          <section class="footer__column">
               <h2 class="visually-hidden">Connect</h2>
-              <p class="footer__connect subtitle">Connect</p>
-              <form class="connect__form" method="post">
-                  <input class="connect__input" type="email" name="email" placeholder="Email">
+              <p class="footer__subtitle footer__subtitle--dist">Connect</p>
+              <form class="footer__form" method="post">
+                  <input class="footer__input" type="email" name="email" placeholder="Email">
                   @@include('blocks/button.html',
                     {"additionalclass": "connect__btn",
                     "buttonType": "submit",
@@ -44,10 +68,10 @@
               </ul>
           </section>
       </div>
-      <div class="box free-column">
-      <section class="rating column">
+      <div class="footer__inner">
+      <section class="footer__column rating">
           <h2 class="visually-hidden">Company Rating</h2>
-          <div class="rating-group">
+          <div class="rating__group">
               <input class="rating__input" type="radio" name="star" id="star-5" value="5">
               <label class="rating__star" aria-label="terribly" for="star-5"></label>
 
@@ -65,8 +89,8 @@
               Company Rating
           </div> 
       </section>
-      <p class="column copyright">Copyright &copy; 2018 Dlk • Design Life Kids;</p>
-      <a class="column designer" href="https://directline.digital/" target="_blank">Web Design — Direct Line Development</a>
+      <p class="footer__column footer__copyright">Copyright &copy; 2018 Dlk • Design Life Kids;</p>
+      <a class="footer__column footer__designer" href="https://directline.digital/" target="_blank">Web Design — Direct Line Development</a>
       </div>
       </div>
 </footer>
