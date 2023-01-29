@@ -8,76 +8,65 @@
     display: flex;
     flex-wrap: wrap;
     background-color: #EEE4DB;
+    &__inner {
+      padding: 18px 0 0 28px;  
+    }
+    &__slide-number {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 200;
+      font-size: 60px;
+      line-height: 74px;
+      color: rgba(30, 6, 6, 0.05);
+    }
+    &__switch {
+      line-height: 14px;
+    }
+    &__switch-btn {
+      margin-left: 3px;
+      width: 31px;
+      height: 3px;
+      border: none;
+      background: #D6CAC2;
+    }
+    &__switch-btn:hover {
+      cursor: pointer;
+      background: #725F5B;
+    }
+    &__switch-btn--active {
+      background: #725F5B;
+    }
+    &__slide {
+      padding-left: 44px;
+      padding-top: 92px;
+      padding-bottom: 89px;
+    }
+    &__title {
+      margin: 0;
+      max-width: 307px;
+    }
+    &__subtitle {
+      margin: 17px 0 20px 0;
+      font-family: 'Crimson Text', 'Times New Roman', serif;
+      font-style: italic;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 26px;
+      color: #1E0606;
+    }
+    &__img {
+      position:absolute;
+      top: -21.5%;
+      right: 8.3%;   
+    }
+    &__delivery-info {
+      margin: 0 auto;
+      width: 100%;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 40px;
+      text-align: center;
+      color: #FFFFFF;
+      background: #C29974;
+    }
   }
-  
-  .banner__switch {
-    padding: 18px 0 0 28px;  
-  }
-  
-  .banner__slide-switch {
-    line-height: 14px;
-  }
-  
-  .banner__slide-number {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 200;
-    font-size: 60px;
-    line-height: 74px;
-    color: rgba(30, 6, 6, 0.05);
-  }
-  
-  .switch__btn {
-    margin-left: 3px;
-    width: 31px;
-    height: 3px;
-    border: none;
-    background: #D6CAC2;
-  }
-  .btn-active {
-    background: #725F5B;
-  }
-  
-  .switch__btn:hover {
-    cursor: pointer;
-    background: #725F5B;
-  }
-  
-  .banner__slide {
-    padding-left: 44px;
-    padding-top: 92px;
-    padding-bottom: 89px;
-  }
-  
-  .banner__slide-img {
-    position:absolute;
-    top: -21.5%;
-    right: 8.3%;   
-  }
-  
-  .banner__slide-title {
-    margin: 0;
-    max-width: 307px;
-  }
-  
-  .banner__slide-info {
-    margin: 17px 0 20px 0;
-    font-family: 'Crimson Text', 'Times New Roman', serif;
-    font-style: italic;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 26px;
-    color: #1E0606;
-  }
-  
-  .banner__delivery-info {
-    margin: 0 auto;
-    width: 100%;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 40px;
-    text-align: center;
-    color: #FFFFFF;
-    background: #C29974;
-  }
-  

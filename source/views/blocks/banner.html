@@ -1,24 +1,24 @@
 <main class="banner__wrapper container">
     <section class="banner">
-        <div class="banner__switch">
-            <span class="banner__slide-number" id="span">01</span>
-            <ul class="banner__slide-switch">
-                <li class="banner__switch-item"><button class="switch__btn btn-active" aria-label="slide-one" type="button"></button></li>
-                <li class="banner__switch-item"><button class="switch__btn" aria-label="slide-two" type="button"></button></li>
-                <li class="banner__switch-item"><button class="switch__btn" aria-label="slide-three" type="button"></button></li>
-                <li class="banner__switch-item"><button class="switch__btn" aria-label="slide-four" type="button"></button></li>
+        <div class="banner__inner">
+            <span class="banner__slide-number">01</span>
+            <ul class="banner__switch">
+                <li><button class="banner__switch-btn banner__switch-btn--active" aria-label="slide-one" type="button"></button></li>
+                <li><button class="banner__switch-btn" aria-label="slide-two" type="button"></button></li>
+                <li><button class="banner__switch-btn" aria-label="slide-three" type="button"></button></li>
+                <li><button class="banner__switch-btn" aria-label="slide-four" type="button"></button></li>
             </ul>
         </div>
         <div class="banner__slide">
-            <h1 class="banner__slide-title">THE OOH NOO COLLECTION</h1>
-            <p class="banner__slide-info">Designed in Slovenia</p>
+            <h1 class="banner__title">THE OOH NOO COLLECTION</h1>
+            <p class="banner__subtitle">Designed in Slovenia</p>
             @@include('blocks/button.html',
             {"additionalclass": "banner__btn",
             "buttonType": "button",
             "buttonName": "explore now",
             "buttonTab": "false"})
         </div>
-        <img class="banner__slide-img" src="./img/monster.png" alt="monster">
+        <img class="banner__img" src="./img/monster.png" alt="monster">
         <p class="banner__delivery-info">FREE (CONTIENENTAL) USA SHIPPING ON ALL ORDERS OFf $100 USD OR MORE!</p>
     </section>
 </main>
