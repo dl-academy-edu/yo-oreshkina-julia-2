@@ -1,0 +1,66 @@
+<section class="filter">
+    <h2 class="visually-hidden">filter</h2>
+    <form class="container filter__form" method="get"> <!-- не уверена -->
+        <div class="filter__cost">
+            <h3 class="filter__subtitle">Cost</h3>
+            <input class="range-field" type="range" id="range" name="cost" value="100" step="100" min="0" max="500">
+            <label class="filter__label range-label" for="range">0 500</label>
+        </div>
+        <fieldset class="filter__color">
+            <legend class="filter__subtitle">Color</legend>
+            <ul>
+                <li class="checkbox">
+                    <input class="checkbox__input" type="checkbox" id="color-black" name="color" value="black">
+                    <label class="filter__label checkbox__label" for="color-black">Black</label>
+                </li>
+                <li class="checkbox">
+                    <input class="checkbox__input" type="checkbox" id="color-blue" name="color" value="blue">
+                    <label class="filter__label checkbox__label" for="color-blue"> Blue</label>
+                </li>
+                <li class="checkbox">
+                    <input class="checkbox__input" type="checkbox" id="color-green" name="color" value="green">
+                    <label class="filter__label checkbox__label" for="color-green">Green</label>
+                </li>
+                <li class="checkbox">
+                    <input class="checkbox__input" type="checkbox" id="color-white" name="color" value="white">
+                    <label class="filter__label checkbox__label" for="color-white"> White</label>
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset class="filter__delivery">
+            <legend class="filter__subtitle">Delivery</legend>
+            <ul>
+                <li class="delivery">
+                    <input class="delivery__input" type="radio" id="delivery-free" name="method" value="free">
+                    <label class="filter__label delivery__label" for="delivery-free">Free shipping</label>
+                </li>
+                <li class="delivery">
+                    <input class="delivery__input" type="radio" id="delivery-fast" name="method" value="fast" checked>
+                    <label class="filter__label delivery__label" for="delivery-fast">Fast shipping</label>
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset class="filter__amount">
+            <legend class="filter__subtitle">Amount</legend>
+            <div class="amount">
+                <div>
+                    <input class="amount__input" type="radio" id="amount-5" name="amount" value="0-5">
+                    <label class="amount__label" for="amount-5">0-5</label>
+                </div>
+                <div> 
+                    <input class="amount__input" type="radio" id="amount-20" name="amount" value="10-20">
+                    <label class="amount__label" for="amount-20">10-20</label>
+                </div>
+                <div>
+                    <input class="amount__input" type="radio" id="amount-50" name="amount" value="20-50">
+                    <label class="amount__label" for="amount-50">20-50</label> 
+                </div>
+            </div>
+        </fieldset>
+        @@include('blocks/button.html',
+                {"additionalclass": "filter__apply-btn",
+                "buttonType": "submit",
+                "buttonName": "Apply",
+                "buttonTab": "false"})    
+    </form>
+</section>

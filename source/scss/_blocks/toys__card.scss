@@ -1,0 +1,52 @@
+.toys__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.toys__link {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 21%;
+    left: 23%;
+    width: 207px;
+    height: 207px;
+    background-color: #E5EAF8;
+    opacity: 0; 
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 29px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #1E0606;
+    text-shadow: 0px 0px 40px rgba(147, 3, 3, 0.25);
+}
+
+.toys__img:hover + .toys__link, .toys__link:hover {
+    opacity: 0.9; 
+}
+
+.toys__img:active + .toys__link, .toys__link:active {
+    opacity: 0.67;
+}
+
+.toys__img {
+    margin-bottom: 30px;
+}
+
+.toys__name {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.toys__cost {
+    font-weight: bold;
+    margin-bottom: 28px;
+}

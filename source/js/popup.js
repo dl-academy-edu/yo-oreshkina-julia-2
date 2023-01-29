@@ -1,9 +1,9 @@
 "Use strict";
 
 const modalWindow = document.querySelector('.popup');
-const overlay = document.querySelector('.overlay');
+const overlay = document.querySelector('.popup__overlay');
 const buttonModalWindow = document.querySelector('.banner__btn');
-const buttonClosedModalWindow = document.querySelector('.popup-closed');
+const buttonClosedModalWindow = document.querySelector('.popup__btn');
 const inputName = document.querySelector('.popup__input');
 
 function openModalWindow() {
