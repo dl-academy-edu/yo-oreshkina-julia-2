@@ -1,39 +1,32 @@
-.navigation {
+.nav {
     display: flex;
     justify-content: space-between;
     align-items:center;
     height: 30px;
     margin-bottom: 56px;
+    &__link--vector > path:hover {
+      stroke: #C29974;
+      stroke-opacity: 1;
+    }
+    &__link--vector > path:active {
+      stroke: #C29974;
+      stroke-opacity: 0.7;
+    }
+    &__pages {
+      display: flex;
+      flex-direction: row;
+      gap: 65px;
+    }
+    &__page {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: bold;
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+    &__page:hover {
+      color: #AAAAAA;
+    }
+    &__page--active {
+      color: #C29974;
+    }
   }
-  
-  .navigation div {
-    display: flex;
-    flex-direction: row;
-    gap: 65px;
-  }
-  
-  .nav__link {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    font-size: 16px;
-    text-transform: uppercase;
-  }
-  
-  .nav__link:hover {
-    color: #AAAAAA;
-  }
-  
-  .link--active {
-    color: #C29974;
-  }
-  
-  .nav__link-vector > path:hover {
-    stroke: #C29974;
-    stroke-opacity: 1;
-  }
-  
-  .nav__link-vector > path:active {
-    stroke: #C29974;
-    stroke-opacity: 0.7;
-  }
-  
