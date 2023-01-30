@@ -1,0 +1,115 @@
+.form {
+    @extend .column__two-input;
+    box-sizing: border-box;
+    flex-direction: column;
+    padding: 42px 40px;
+    max-height: 542px;
+    max-width: 680px;
+    background: #E5EAF8;
+    z-index: 2;
+  }
+  
+  .column__two-input {
+    display: flex;
+    gap: 20px;
+    .two-input {
+        width:290px;
+        margin: auto;
+      }
+  }
+
+  .left {
+    margin-left: 22px;
+  }
+  
+// Плейсхолдер должен быть только на странице contact. УТОЧНИТЬ!
+input[type="text"]::placeholder {
+    content: 'Ivan Ivanov';
+    font-family: 'Open Sans';
+    font-size: 18px;
+    line-height: 25px;
+    color: $primary-text;
+}
+  
+  .label__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    .popup__label--text {
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .contact__label--text {
+        font-family: $open-sans;
+        font-size: 14px;
+        line-height: 18px;
+    }
+  }
+  
+  .label__wrapper > input {
+    box-sizing:border-box;
+    padding-left: 20px;
+    border: 1px solid $elem-disabled;
+    height: 50px;
+  }
+  
+  .label__wrapper > textarea {
+    box-sizing:border-box;
+    padding-left: 20px;
+    resize: none;
+    border: 1px solid $elem-disabled;
+  }
+  
+  .label__wrapper > input:focus,
+  .label__wrapper > input:hover,
+  .label__wrapper > input:active {
+    outline: 1px solid $secondary;
+  }
+  
+  .label__wrapper > textarea:focus,
+  .label__wrapper > textarea:hover,
+  .label__wrapper > textarea:active {
+    outline: 1px solid $secondary;
+  }
+  
+  .label__wrapper > input:disabled,
+  .label__wrapper > textarea:disabled {
+    outline: 1px solid #EBEBEB;
+  }
+  
+  .checkbox__label {
+    position: inherit;
+    display: flex;
+    align-items:center;
+    margin-left: 34px;
+  }
+  
+  .checkbox__input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+  
+  .checkbox__label::after {
+    content: ' ';
+    position: absolute;
+    margin-left: -34px;
+    width: 17px;
+    height: 17px;
+    background-color:inherit; 
+    border-radius: 3px;
+    box-shadow: 0 0 0 2px $secondary;  
+  }
+  
+  .checkbox__input:disabled + .checkbox__label::after {
+    box-shadow: 0 0 0 2px #E1CDBA;
+  }
+  
+  .checkbox__input:checked + .checkbox__label::after {
+    background-color: $white;
+    background-image: url('../img/icons/vector-check.svg');
+    background-size:cover;
+  }

@@ -16,26 +16,11 @@
         margin-bottom: 20px;
     }
     &__info > span {
-        font-family: 'Montserrat';
+        font-family: $montserrat;
         font-weight: 600;
         font-size: 26px;
         line-height: 34px;
         text-transform: uppercase;
         color: $secondary;
     }
-}
-
-
-.label {
-    font-family: $open-sans;
-    font-size: 14px;
-    line-height: 18px;
-}
-
-input[type="text"]::placeholder {
-    content: 'Ivan Ivanov';
-    font-family: 'Open Sans';
-    font-size: 18px;
-    line-height: 25px;
-    color: $primary-text;
 }

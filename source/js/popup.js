@@ -4,7 +4,7 @@ const modalWindow = document.querySelector('.popup');
 const overlay = document.querySelector('.popup__overlay');
 const buttonModalWindow = document.querySelector('.banner__btn');
 const buttonClosedModalWindow = document.querySelector('.popup__btn');
-const inputName = document.querySelector('.popup__input');
+const inputName = document.querySelector('.form__input');
 
 function openModalWindow() {
     buttonModalWindow.addEventListener('click', () => {
