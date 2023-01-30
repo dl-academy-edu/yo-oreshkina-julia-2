@@ -1,8 +1,6 @@
 .products-card {
     position: relative;
-    display:flex;
-    align-items:center;
-    justify-content: center;
+    @include elem-flex-center;
     width: 280px;
     height: 270px;
     &__img {
