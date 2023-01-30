@@ -20,11 +20,9 @@
       background-repeat: no-repeat;
     }
     &__link {
-      font-family: 'Crimson Text';
+      font-family: $crimson-text;
       font-style: italic;
-      font-weight: normal;
       font-size: 20px;
       line-height: 26px;
-      color: #1E0606;
     }
   }

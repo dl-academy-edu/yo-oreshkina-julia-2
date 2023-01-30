@@ -1,5 +1,5 @@
 .footer {
-  background: #434343;
+  background: $footer-bg;
   &__free-columns {
     padding-top: 100px;
     display: flex;
@@ -70,7 +70,7 @@
     align-items: center;
   }
   &__copyright {
-    color: #FFFFFF;
+    color: $white;
   }
   &__designer {
     font-size: 16px;
@@ -79,7 +79,7 @@
   }
   &__designer:hover, &__designer:active {
     text-decoration-line: underline;
-    color: #FFFFFF; 
+    color: $white; 
   }
 }
 
@@ -107,16 +107,14 @@
     flex-direction: row-reverse;
     align-items:center;
     font-size: 16px;
-    font-family: 'Open Sans';
-    font-weight: normal;
+    font-family: $open-sans;
     line-height: 22px;
     width: 254px;
-    height: 16px;
     margin-left: -2px;
-    color: #FFFFFF;
+    color: $white;
   }
   &__group:hover, &__group:active {
-    color: #C29974;
+    color: $secondary;
   }
   &__input {
     position: absolute;

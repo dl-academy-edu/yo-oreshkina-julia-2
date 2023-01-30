@@ -4,7 +4,7 @@
 }
 
 body {
-  color: #1E0606;
+  color: $primary-text;
 }
 
 li {
@@ -13,16 +13,16 @@ li {
 
 a {
   text-decoration: none;
-  font-family: 'Open Sans', sans-serif;
+  font-family: $open-sans;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 20px;
-  color: #1E0606;
+  color: $primary-text;
 }
 
 h1, h2 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: $montserrat;
   font-style: normal;
   font-weight: bold;
   text-transform: uppercase;
@@ -33,16 +33,16 @@ h1, h2 {
 h2 {
   font-size: 38px;
   line-height: 46px;
-  color: #1E0606;
+  color: $primary-text;
 }
 
 p {
-  font-family: 'Open Sans', sans-serif;
+  font-family: $open-sans;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 22px;
-  color: #1E0606;
+  color: $primary-text;
 }
 
 img {

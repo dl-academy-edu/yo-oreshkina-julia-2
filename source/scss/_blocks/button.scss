@@ -1,28 +1,27 @@
 .button {
-    border: none;
     padding: 0 22px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-transform: uppercase;
-    font-family: 'Open Sans', sans-serif;
+    font-family: $open-sans;
     font-weight: bold;
     line-height: 22px;
-    color: #FFFFFF;
+    color: $white;
     min-height: 40px;
-    background: #000000;
+    background: $black;
     margin-right: auto;
   }
   
   .button:hover {
     cursor: pointer;
-    background: #C29974;
+    background: $secondary;
   }
   
   .button:active {
-    background: #CFAF91;
+    background: $elem-active;
   }
   
   .button:disabled {
-    background: #C7C1C1;
+    background: $elem-disabled;
   }

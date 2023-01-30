@@ -77,12 +77,12 @@
   width: 38px;
   height: 37px;
   border: none;
-  background-color: rgba(112, 187, 220, 0.2)
+  background-color: $bg-elem;
 }
 
 .btn-vector > path:hover {
   cursor: pointer;
-  stroke: #C29974;
+  stroke: $secondary;
 }
 
 .btn-vector > path:active {
@@ -103,7 +103,7 @@
   display: flex;
   justify-content: space-between;
   &__photo {
-    background: rgba(112, 187, 220, 0.1);
+    background: $bg-elem;
   }
   &__inner {
     padding-top: 33px;
@@ -124,10 +124,10 @@
     cursor: pointer;
   }
   &__item--active {
-    background: rgba(112, 187, 220, 0.2);
+    background: $bg-elem;
   }
   &__link {
-    font-family: 'Crimson Text', serif;
+    font-family: $crimson-text;
     font-style: italic;
     font-size: 26px;
     line-height: 58px;
@@ -168,11 +168,11 @@
 .about {
   max-width: 543px;
   min-height: 228px;
-  background-color:#E1F0F7;
+  background-color: $bg-blocks;
   margin-right: 56px;
   &__link {
     margin-left: 30px;
-    font-family: 'Crimson Text';
+    font-family: $crimson-text;
     font-style: italic;
     font-size: 26px;
     line-height: 48px;
@@ -190,7 +190,7 @@
 .contacts {
   width: 543px;
   height: 209px;
-  background-color:#E1F0F7;
+  background-color: $bg-blocks;
   &__info {
     margin: 20px 30px;
   }

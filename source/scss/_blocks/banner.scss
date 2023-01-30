@@ -12,11 +12,11 @@
       padding: 18px 0 0 28px;  
     }
     &__slide-number {
-      font-family: 'Montserrat', sans-serif;
+      font-family: $montserrat;
       font-weight: 200;
       font-size: 60px;
       line-height: 74px;
-      color: rgba(30, 6, 6, 0.05);
+      opacity: 0.05;
     }
     &__switch {
       line-height: 14px;
@@ -46,12 +46,10 @@
     }
     &__subtitle {
       margin: 17px 0 20px 0;
-      font-family: 'Crimson Text', 'Times New Roman', serif;
+      font-family: $crimson-text;
       font-style: italic;
-      font-weight: normal;
       font-size: 20px;
-      line-height: 26px;
-      color: #1E0606;
+      line-height: 26px;     
     }
     &__img {
       position:absolute;
@@ -61,12 +59,11 @@
     &__delivery-info {
       margin: 0 auto;
       width: 100%;
-      font-family: 'Open Sans', sans-serif;
       font-weight: bold;
       font-size: 12px;
       line-height: 40px;
       text-align: center;
-      color: #FFFFFF;
-      background: #C29974;
+      color: $white;
+      background: $secondary;
     }
   }

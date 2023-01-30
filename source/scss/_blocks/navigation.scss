@@ -5,11 +5,11 @@
     height: 30px;
     margin-bottom: 56px;
     &__link--vector > path:hover {
-      stroke: #C29974;
+      stroke: $secondary;
       stroke-opacity: 1;
     }
     &__link--vector > path:active {
-      stroke: #C29974;
+      stroke: $secondary;
       stroke-opacity: 0.7;
     }
     &__pages {
@@ -18,7 +18,7 @@
       gap: 65px;
     }
     &__page {
-      font-family: 'Montserrat', sans-serif;
+      font-family: $montserrat;
       font-weight: bold;
       font-size: 16px;
       text-transform: uppercase;
@@ -27,6 +27,6 @@
       color: #AAAAAA;
     }
     &__page--active {
-      color: #C29974;
+      color: $secondary;
     }
   }

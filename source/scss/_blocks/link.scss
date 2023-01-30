@@ -4,24 +4,23 @@
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
-  font-family: 'Open Sans', sans-serif;
   font-weight: bold;
   line-height: 22px;
   letter-spacing: 1px;
-  color: #FFFFFF;
+  color: $white;
   min-height: 40px;
-  background: #000000;
+  background: $black;
 }
 
 .link:hover {
-  background: #C29974;
+  background: $secondary;
 }
 
 .link:active {
-  background: #CFAF91;
+  background: $elem-active;
 }
 
 .link:disabled {
-  background: #C7C1C1;
+  background: $elem-disabled;
 }
 
