@@ -22,8 +22,9 @@
     margin-left: 22px;
   }
   
-// Плейсхолдер должен быть только на странице contact. УТОЧНИТЬ!
-input[type="text"]::placeholder {
+// Плейсхолдер должен быть на странице contact. и отсутсвовать в попапе. 
+// Не работает через переменные в HTML.
+  .form__input::placeholder {
     content: 'Ivan Ivanov';
     font-family: 'Open Sans';
     font-size: 18px;

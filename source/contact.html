@@ -35,7 +35,10 @@
         </ul>
         <div class="contact__wrapper">
             @@include('blocks/form.html', 
-            {"labelClass": "contact__label--text"})
+            {"labelClass": "contact__label--text",
+            "checkboxId": "agree",
+            "checkboxFor": "agree",
+            "atr": "checked"})
             <section class="contact__info">
                 <h2 class="visually-hidden">Information about a support group</h2>
                 <p>Our support team are on-hand to assist with any issues you are experiencing.</p>
