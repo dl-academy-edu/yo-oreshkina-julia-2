@@ -30,6 +30,7 @@
     width: 287px;
     padding-left: 15px;
     background-color:#666666;
+    transition: 0.4s;
   }
   &__input::placeholder {
     content:"Email";
