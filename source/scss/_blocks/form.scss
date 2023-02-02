@@ -53,6 +53,7 @@
     padding-left: 20px;
     border: 1px solid $elem-disabled;
     height: 50px;
+    transition: 0.4s;
   }
   
   .label__wrapper > textarea {
@@ -60,6 +61,7 @@
     padding-left: 20px;
     resize: none;
     border: 1px solid $elem-disabled;
+    transition: 0.4s;
   }
   
   .label__wrapper > input:focus,
@@ -102,7 +104,8 @@
     height: 17px;
     background-color:inherit; 
     border-radius: 3px;
-    box-shadow: 0 0 0 2px $secondary;  
+    box-shadow: 0 0 0 2px $secondary;
+    transition: 0.4s;  
   }
   
   .checkbox__input:disabled + .checkbox__label::after {

@@ -81,6 +81,10 @@
   background-color: $bg-elem;
 }
 
+.btn-vector > path {
+  transition: 0.4s;
+}
+
 .btn-vector > path:hover {
   cursor: pointer;
   stroke: $secondary;
@@ -119,6 +123,7 @@
   &__item {
     margin-left: -60px;
     height: 55px;
+    transition: 0.4s;
   }
   &__item:hover {
     background: rgba(112, 187, 220, 0.1);

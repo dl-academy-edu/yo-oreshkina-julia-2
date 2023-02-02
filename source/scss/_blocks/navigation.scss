@@ -4,6 +4,9 @@
     align-items:center;
     height: 30px;
     margin-bottom: 56px;
+    &__link--vector > path {
+      transition: 0.4s;
+    }
     &__link--vector > path:hover {
       stroke: $secondary;
       stroke-opacity: 1;

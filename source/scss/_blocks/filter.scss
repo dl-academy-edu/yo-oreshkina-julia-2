@@ -97,79 +97,81 @@
             text-decoration-line: underline;
         }
     }
-    .delivery {
-        margin-bottom: 10px;
-        &__label {
-            position: inherit;
-            display: flex;
-            align-items:center;
-            margin-left: 30px;
-        }
-        &__label::after {
-            content: '';
-            position: absolute;
-            margin-left: -30px;
-            width: 17px;
-            height: 17px;
-            background-color:inherit; 
-            border-radius: 50%;
-            border: 2px solid $secondary; 
-        }
-        &__input {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            overflow: hidden;
-            clip: rect(0 0 0 0);
-        }
-        &__input:disabled + &__label::after {
-            border: 2px solid #E1CDBA;
-        }
-        &__input:disabled + &__label {
-            color: #908484;
-        }
-        &__input:checked + &__label::after {
-            background-color: $secondary;
-            box-shadow: inset 0 0 0 3px $white;
-        }
-        &__input:active + &__label,
-        &__input:hover + &__label {
-            text-decoration-line: underline;
-        }  
+}
+.delivery {
+    margin-bottom: 10px;
+    &__label {
+        position: inherit;
+        display: flex;
+        align-items:center;
+        margin-left: 30px;
     }
-    .amount {
+    &__label::after {
+        content: '';
+        position: absolute;
+        margin-left: -30px;
+        width: 17px;
+        height: 17px;
+        background-color:inherit; 
+        border-radius: 50%;
+        border: 2px solid $secondary; 
+        transition: 0.4s;
+    }
+    &__input {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+    }
+    &__input:disabled + &__label::after {
+        border: 2px solid #E1CDBA;
+    }
+    &__input:disabled + &__label {
+        color: #908484;
+    }
+    &__input:checked + &__label::after {
+        background-color: $secondary;
+        box-shadow: inset 0 0 0 3px $white;
+    }
+    &__input:active + &__label,
+    &__input:hover + &__label {
+        text-decoration-line: underline;
+    }  
+}
+.amount {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    background-color: $white;
+    & > div {
         display: flex;
         justify-content: center;
         align-items:center;
-        background-color: $white;
-        & > div {
-            display: flex;
-            justify-content: center;
-            align-items:center;
-            width: 80px;
-            height: 35px;
-        }
-        &__label {
-            display: flex;
-            justify-content: center;
-            align-items:center;
-            width: 80px;
-            height: 35px;
-        }
-        &__label:hover {
-            background: #EDDEEB;
-            color: #877379;
-            cursor:pointer;
-        } 
-        &__input {
-            position: absolute;
-            display: none;
-            width: 35px;
-            height: 35px;
-        }
-        &__input:checked + &__label {
-            background: #F3D0DB;
-        } 
-    }  
-}
+        width: 80px;
+        height: 35px;
+    }
+    &__label {
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        width: 80px;
+        height: 35px;
+        transition: 0.4s;
+    }
+    &__label:hover {
+        background: #EDDEEB;
+        color: #877379;
+        cursor:pointer;
+    } 
+    &__input {
+        position: absolute;
+        display: none;
+        width: 35px;
+        height: 35px;
+    }
+    &__input:checked + &__label {
+        background: #F3D0DB;
+    } 
+}  
 
