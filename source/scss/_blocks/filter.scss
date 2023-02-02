@@ -40,155 +40,136 @@
         height: 40px;
         margin-top: 35px;
     }
-}
-
-
-/*** COST ***/
-
-.range-label {
-    margin-top: 5px;
-    word-spacing: 165px;
-}
-
-.range-field {
-    margin-left: 5px;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    outline: none;
-    width: 188px;
-    height: 4px;
-    border: none;
-    background: rgba(0, 0, 0, 0.5);
-    background-image: linear-gradient($secondary, $secondary);
-    background-size: 20% 100%;
-    background-repeat: no-repeat;
-}
-
-.range-field::-webkit-slider-runnable-track  {
-    -webkit-appearance: none;
-    box-shadow: none;
-    border: none;
-    background: transparent;
-}
-
- .range-field::-moz-range-thumb {
-    -moz-appearance: none;
-    appearance: none;
-    width:8px;
-    height: 8px;
-    background: $white;
-    border-radius: 50%;
-    border: 8px solid $secondary;
-    cursor: pointer;
-}
-
-.range-field::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 24px;
-    height: 24px;
-    background: $white;
-    border-radius: 50%;
-    border: 8px solid $secondary;
-    cursor: pointer;
-}
-    
-.range-field::-moz-range-progress {
-    background: $secondary;
-}
-
-/*** COLOR ***/
-
-.checkbox {
-    margin-bottom: 15px;
-    &__input:disabled + &__label {
-        color: #908484;
+    &__range-label {
+        margin-top: 5px;
+        word-spacing: 165px;
     }
-    &__input:hover + &__label, 
-    &__input:active + &__label {
-        text-decoration-line: underline;
+    &__range-field {
+        margin-left: 5px;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        outline: none;
+        width: 188px;
+        height: 4px;
+        border: none;
+        background: rgba(0, 0, 0, 0.5);
+        background-image: linear-gradient($secondary, $secondary);
+        background-size: 20% 100%;
+        background-repeat: no-repeat;
     }
-}
-
-/*** DELIVERY ***/
-
-.delivery {
-    margin-bottom: 10px;
-    &__label {
-        position: inherit;
-        display: flex;
-        align-items:center;
-        margin-left: 30px;
+    &__range-field::-webkit-slider-runnable-track  {
+        -webkit-appearance: none;
+        box-shadow: none;
+        border: none;
+        background: transparent;
     }
-    &__label::after {
-        content: '';
-        position: absolute;
-        margin-left: -30px;
-        width: 17px;
-        height: 17px;
-        background-color:inherit; 
+    &__range-field::-moz-range-thumb {
+        -moz-appearance: none;
+        appearance: none;
+        width:8px;
+        height: 8px;
+        background: $white;
         border-radius: 50%;
-        border: 2px solid $secondary; 
+        border: 8px solid $secondary;
+        cursor: pointer;
     }
-    &__input {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        overflow: hidden;
-        clip: rect(0 0 0 0);
+    &__range-field::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 24px;
+        height: 24px;
+        background: $white;
+        border-radius: 50%;
+        border: 8px solid $secondary;
+        cursor: pointer;
+    }  
+    &__range-field::-moz-range-progress {
+        background: $secondary;
     }
-    &__input:disabled + &__label::after {
-        border: 2px solid #E1CDBA;
+    .checkbox {
+        margin-bottom: 15px;
+        &__input:disabled + &__label {
+            color: #908484;
+        }
+        &__input:hover + &__label, 
+        &__input:active + &__label {
+            text-decoration-line: underline;
+        }
     }
-    &__input:disabled + &__label {
-        color: #908484;
+    .delivery {
+        margin-bottom: 10px;
+        &__label {
+            position: inherit;
+            display: flex;
+            align-items:center;
+            margin-left: 30px;
+        }
+        &__label::after {
+            content: '';
+            position: absolute;
+            margin-left: -30px;
+            width: 17px;
+            height: 17px;
+            background-color:inherit; 
+            border-radius: 50%;
+            border: 2px solid $secondary; 
+        }
+        &__input {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            clip: rect(0 0 0 0);
+        }
+        &__input:disabled + &__label::after {
+            border: 2px solid #E1CDBA;
+        }
+        &__input:disabled + &__label {
+            color: #908484;
+        }
+        &__input:checked + &__label::after {
+            background-color: $secondary;
+            box-shadow: inset 0 0 0 3px $white;
+        }
+        &__input:active + &__label,
+        &__input:hover + &__label {
+            text-decoration-line: underline;
+        }  
     }
-    &__input:checked + &__label::after {
-        background-color: $secondary;
-        box-shadow: inset 0 0 0 3px $white;
-    }
-    &__input:active + &__label,
-    &__input:hover + &__label {
-        text-decoration-line: underline;
+    .amount {
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        background-color: $white;
+        & > div {
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            width: 80px;
+            height: 35px;
+        }
+        &__label {
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            width: 80px;
+            height: 35px;
+        }
+        &__label:hover {
+            background: #EDDEEB;
+            color: #877379;
+            cursor:pointer;
+        } 
+        &__input {
+            position: absolute;
+            display: none;
+            width: 35px;
+            height: 35px;
+        }
+        &__input:checked + &__label {
+            background: #F3D0DB;
+        } 
     }  
 }
-
-/*** AMOUNT ***/
-
-.amount {
-    display: flex;
-    justify-content: center;
-    align-items:center;
-    background-color: $white;
-    & > div {
-        display: flex;
-        justify-content: center;
-        align-items:center;
-        width: 80px;
-        height: 35px;
-    }
-    &__label {
-        display: flex;
-        justify-content: center;
-        align-items:center;
-        width: 80px;
-        height: 35px;
-    }
-    &__label:hover {
-        background: #EDDEEB;
-        color: #877379;
-        cursor:pointer;
-    } 
-    &__input {
-        position: absolute;
-        display: none;
-        width: 35px;
-        height: 35px;
-    }
-    &__input:checked + &__label {
-        background: #F3D0DB;
-    } 
-}
-
 

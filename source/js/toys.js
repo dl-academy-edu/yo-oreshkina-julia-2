@@ -1,4 +1,4 @@
-const rangeInput = document.querySelector('.range-field');
+const rangeInput = document.querySelector('.filter__range-field');
 
 function handleInputChange(event) {
     let target = event.target;
