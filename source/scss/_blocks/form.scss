@@ -7,113 +7,57 @@
     max-width: 680px;
     background: #E5EAF8;
     z-index: 2;
-  }
-  
-  .column__two-input {
-    display: flex;
-    gap: 20px;
-    .two-input {
-        width:290px;
-        margin: auto;
+    &__label {
+      font-family: 'Roboto', sans-serif;
+      font-size: 14px;
+      line-height: 18px;
+    }
+    &__input::placeholder {
+      content: 'Ivan Ivanov';
+      font-family: 'Roboto', sans-serif;
+      font-size: 18px;
+      line-height: 25px;
+      color: $primary-text;
       }
-  }
-
-  .left {
-    margin-left: 22px;
-  }
-  
-// Плейсхолдер должен быть на странице contact. и отсутсвовать в попапе. 
-// Не работает через переменные в HTML.
-  .form__input::placeholder {
-    content: 'Ivan Ivanov';
-    font-family: 'Open Sans';
-    font-size: 18px;
-    line-height: 25px;
-    color: $primary-text;
-}
-  
-  .label__wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    .popup__label--text {
-        font-family: 'Roboto', sans-serif;
-        font-size: 14px;
-        line-height: 16px;
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
     }
-    .contact__label--text {
-        font-family: $open-sans;
-        font-size: 14px;
-        line-height: 18px;
+    &__inner > input {
+      box-sizing:border-box;
+      padding-left: 20px;
+      border: 1px solid $elem-disabled;
+      height: 50px;
+      transition: 0.4s;
+    }
+    &__inner > textarea {
+      box-sizing:border-box;
+      padding-left: 20px;
+      resize: none;
+      border: 1px solid $elem-disabled;
+      transition: 0.4s;
+    }
+    &__inner > input:focus,
+    &__inner > input:hover,
+    &__inner > input:active {
+      outline: 1px solid $secondary;
+    }
+    &__inner > textarea:focus,
+    &__inner > textarea:hover,
+    &__inner > textarea:active {
+      outline: 1px solid $secondary;
+    }
+    &__inner > input:disabled,
+    &__inner > textarea:disabled {
+      outline: 1px solid #EBEBEB;
     }
   }
-  
-  .label__wrapper > input {
-    box-sizing:border-box;
-    padding-left: 20px;
-    border: 1px solid $elem-disabled;
-    height: 50px;
-    transition: 0.4s;
-  }
-  
-  .label__wrapper > textarea {
-    box-sizing:border-box;
-    padding-left: 20px;
-    resize: none;
-    border: 1px solid $elem-disabled;
-    transition: 0.4s;
-  }
-  
-  .label__wrapper > input:focus,
-  .label__wrapper > input:hover,
-  .label__wrapper > input:active {
-    outline: 1px solid $secondary;
-  }
-  
-  .label__wrapper > textarea:focus,
-  .label__wrapper > textarea:hover,
-  .label__wrapper > textarea:active {
-    outline: 1px solid $secondary;
-  }
-  
-  .label__wrapper > input:disabled,
-  .label__wrapper > textarea:disabled {
-    outline: 1px solid #EBEBEB;
-  }
-  
-  .checkbox__label {
-    position: inherit;
-    display: flex;
-    align-items:center;
-    margin-left: 34px;
-  }
-  
-  .checkbox__input {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-  }
-  
-  .checkbox__label::after {
-    content: ' ';
-    position: absolute;
-    margin-left: -34px;
-    width: 17px;
-    height: 17px;
-    background-color:inherit; 
-    border-radius: 3px;
-    box-shadow: 0 0 0 2px $secondary;
-    transition: 0.4s;  
-  }
-  
-  .checkbox__input:disabled + .checkbox__label::after {
-    box-shadow: 0 0 0 2px #E1CDBA;
-  }
-  
-  .checkbox__input:checked + .checkbox__label::after {
-    background-color: $white;
-    background-image: url('../img/icons/vector-check.svg');
-    background-size:cover;
+.column__two-input {
+  display: flex;
+  gap: 20px;
+  .two-input {
+      width:290px;
+      margin: auto;
+    }
   }

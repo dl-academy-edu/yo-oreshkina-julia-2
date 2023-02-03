@@ -1,0 +1,36 @@
+.checkbox__label {
+    position: inherit;
+    display: flex;
+    align-items:center;
+    margin-left: 34px;
+}
+  
+.checkbox__input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    }
+
+.checkbox__label::after {
+    content: ' ';
+    position: absolute;
+    margin-left: -34px;
+    width: 17px;
+    height: 17px;
+    background-color:inherit; 
+    border-radius: 3px;
+    box-shadow: 0 0 0 2px $secondary;
+    transition: 0.4s;  
+}
+
+.checkbox__input:disabled + .checkbox__label::after {
+    box-shadow: 0 0 0 2px #E1CDBA;
+}
+
+.checkbox__input:checked + .checkbox__label::after {
+    background-color: $white;
+    background-image: url('../img/icons/vector-check.svg');
+    background-size:cover;
+}

@@ -1,18 +1,18 @@
-.blog__title {
-    margin-top: 0;
-    margin-bottom: 15px;
-    line-height: 48px;
-}
-
-.blog__list {
-    margin-top: 50px;
-    margin-bottom: 31px;
-    display: flex;
-    row-gap: 15px;
-    column-gap: 20px;
-    flex-wrap: wrap;
-}
-
-.blog__nav {
-    margin-bottom: 56px;
+.blog {
+    &__title {
+        margin-top: 0;
+        margin-bottom: 15px;
+        line-height: 48px;
+    }
+    &__list {
+        margin-top: 50px;
+        margin-bottom: 31px;
+        display: flex;
+        row-gap: 15px;
+        column-gap: 20px;
+        flex-wrap: wrap;
+    }
+    &__nav {
+        margin-bottom: 56px;
+    }
 }

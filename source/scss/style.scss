@@ -16,6 +16,7 @@
   Import all other blocks
 */
 @import "_blocks/container";
+@import "_blocks/checkbox";
 @import "_blocks/header";
 @import "_blocks/header__menu__item";
 @import "_blocks/filter";
@@ -28,10 +29,10 @@
 @import "_blocks/banner";
 @import "_blocks/breadcrumbs";
 @import "_blocks/partners";
-@import "_blocks/navigation.scss";
-@import "_blocks/blog__item.scss";
-@import "_blocks/products-card.scss";
-@import "_blocks/toys__card.scss";
+@import "_blocks/navigation";
+@import "_blocks/blog__item";
+@import "_blocks/products-card";
+@import "_blocks/toys__card";
 @import "catalog";
 @import "toys";
 @import "blog";
