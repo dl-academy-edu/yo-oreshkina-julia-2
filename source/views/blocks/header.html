@@ -5,14 +5,18 @@
     <nav class="header__menu">
         <ul class="header__menu__list">
             @@include('blocks/header__menu__item.html',
-            {"menuLink": "/blog.html",
-            "menuLinkName": "BLOG"})
-            @@include('blocks/header__menu__item.html',
             {"menuLink": "/catalog.html",
             "menuLinkName": "CATALOG"})
             @@include('blocks/header__menu__item.html',
             {"menuLink": "#",
             "menuLinkName": "ABOUT US"})
+            @@include('blocks/header__menu__item.html',
+            {"menuLink": "/blog.html",
+            "menuLinkName": "BLOG"})
+            @@include('blocks/header__menu__item.html',
+            {"menuLink": "/animation.html",
+            "menuLinkName": "ANIMATION"})
+            
         </ul>
     </nav>
     <a class="header__contact-link icon-search" href="/contact.html">CONTACT US</a>

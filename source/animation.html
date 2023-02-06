@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="google" content="notranslate">
+    <meta name="format-detection" content="telephone=no">
+
+    <title>DL Academy</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <script>
+      var docElement = document.documentElement;
+      docElement.className = docElement.className.replace(/\bno-js\b/, '') + ' js';
+    </script>
+
+    <!-- Favicon -->
+
+    <!-- build:css -->
+    <link href="css/style.min.css" rel="stylesheet">
+    <!-- endbuild -->
+  </head>
+  <body>
+    @@include('blocks/header.html')
+    <main class="animation">
+        <h2 class="animation__title container">Animation scene</h2>
+        <ul class="breadcrumbs container">
+            @@include('blocks/breadcrumbs.html', 
+            {"breadcrumbsPath": "/",
+            "breadcrumbsText": "Home"})
+            @@include('blocks/breadcrumbs.html', 
+            {"breadcrumbsPath": "#",
+            "breadcrumbsText": "Animation"})
+        </ul>
+        <section class="animation__inner">
+            <div class="animation__sky">
+                <div class="animation__row">
+                    <div class="animation__cloud-one"></div>
+                    <div class="animation__cloud-two"></div>
+                </div>
+                <div class="animation__row">
+                    <div class="animation__cloud-three"></div>
+                    <div class="animation__cloud-four"></div>
+                    <div class="animation__cloud-five"></div>
+                </div>
+                <div class="animation__row">
+                    <div class="animation__cloud-six"></div>
+                </div>
+                <div class="animation__sun"></div>
+            </div>
+            <div class="animation__town">
+                <div class="animation__highway">
+                    <div class="animation__card-one"></div>
+                    <div class="animation__card-two"></div>
+                    <div class="animation__card-three"></div>
+                    <div class="animation__card-four"></div>
+                </div>
+                <div class="animation__lantern animation__lantern--left"></div>
+                <div class="animation__lantern animation__lantern--right""></div>
+                <div class="animation__taxi"></div>
+                <div class="animation__driver-message"></div>
+                <div class="animation__roadside">
+                    <div class="animation__woman-massege"></div>
+                    <div class="animation__woman">
+                        <div class="animation__woman-arm"></div>
+                    </div>
+                    <div class="animation__suitcases"></div>
+                    <div class="animation__man-massege"></div>
+                    <div class="animation__man-massege-two"></div>
+                    <div class="animation__man"></div>
+                    <div class="animation__man-arm"></div>
+                    <div class="animation__glowing-lantern"></div>
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+    @@include('blocks/footer.html')
+  </body>
+  </html>

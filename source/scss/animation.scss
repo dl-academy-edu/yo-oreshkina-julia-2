@@ -1,0 +1,379 @@
+.animation {
+    &__title {
+        margin-bottom: 10px;
+        font-size: 36px
+    }
+    &__inner {
+        height: 768px;
+    }
+    &__sky {
+        position: relative;
+        max-width: 1400px;
+        margin: auto;
+        margin-top: 60px;
+    }
+    &__row {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+    }
+    &__row > div {
+        animation: sky linear 60s forwards;
+        animation-iteration-count: infinite;
+    }
+    &__cloud-one {
+        margin-left: 80px;
+        background: url('../img/animation/cloud1.png') no-repeat;
+        background-size: cover;
+        width: 91px;
+        height:26px;
+        z-index: 2;
+    }
+    &__cloud-two {
+        background: url('../img/animation/cloud2.png') no-repeat;
+        background-size: cover;
+        margin-left: 442px;
+        width: 158px;
+        height: 32px;
+        z-index: 2;
+    }
+    &__cloud-three {
+        background: url('../img/animation/cloud3.png') no-repeat;
+        background-size: cover;
+        margin-left: 356px;
+        width: 208px;
+        height: 38px;
+        z-index: 2;
+    }
+    &__cloud-four {
+        background: url('../img/animation/cloud4.png') no-repeat;
+        background-size: cover;
+        margin-left: 210px;
+        width: 108px;
+        height:26px;
+        z-index: 2;
+    }
+    &__cloud-five {
+        margin-left: 147px;
+        background: url('../img/animation/cloud5.png') no-repeat;
+        background-size: cover;
+        width: 164px;
+        height: 33px;
+        z-index: 2;
+    }
+    &__cloud-six {
+        background: url('../img/animation/cloud5.png') no-repeat;
+        background-size: cover;
+        margin-left: 726px;
+        margin-top: 12px;
+        width: 200px;
+        height: 41px;
+        z-index: 2;
+    }
+    &__sun {
+        position: absolute;
+        top: -10%;
+        right: 12.3%;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: #F4EBFF;
+        z-index: 1;
+    }
+    &__town {
+        position: relative;
+        margin: 0 auto;
+        max-width: 1400px;
+        height: 630px;
+        background: url('../img/animation/base.png') no-repeat;
+        background-position: center;
+        background-size: cover;
+        overflow: hidden;
+    }
+    &__highway {
+        padding-top: 280px;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+    }
+    &__card-one {
+        background: url('../img/animation/car-one.png') no-repeat;
+        background-size: cover;
+        width: 251px;
+        height: 100px;
+        position: absolute;
+        bottom: 39%;
+        left: -10%;
+        z-index: 2;
+        animation: cars-move linear 7s forwards;
+        animation-iteration-count: infinite;
+    }
+    &__card-two {
+        background: url('../img/animation/car-two.png') no-repeat;
+        background-size: cover;
+        width: 204px;
+        height: 96px;
+        position: absolute;
+        bottom: 37%;
+        left: -5%;
+        z-index: 4;
+        animation: cars-move linear 5s forwards;
+        animation-iteration-count: infinite;
+    }
+    &__card-three {
+        background: url('../img/animation/car-three.png') no-repeat;
+        background-size: cover;
+        width: 247px;
+        height: 65px;
+        position: absolute;
+        bottom: 38%;
+        left: -10%;
+        z-index: 3;
+        animation: cars-move linear 3s forwards;
+        animation-iteration-count: infinite;
+    }
+    &__card-four {
+        background: url('../img/animation/car-four.png') no-repeat;
+        background-size: cover;
+        width: 269px;
+        height: 129px;
+        position: absolute;
+        bottom: 36%;
+        left: -15%;
+        z-index: 5;
+        animation: cars-move linear 9s forwards;
+        animation-iteration-count: infinite;
+    }
+    &__lantern {
+        position: absolute;
+        top: 5%;
+        background: url('../img/animation/lanterns.png') no-repeat;
+        background-size: cover;
+        width: 151px;
+        height: 395px;
+        z-index: 8;
+    }
+    &__lantern--left {
+        left: 31%;
+    }
+    &__lantern--right {
+        right: -4%;
+    }
+    &__taxi {
+        position: absolute;
+        background: url('../img/animation/car-taxi.png') no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 887px;
+        height: 266px;
+        top: 43%;
+        right: -100%;
+        z-index: 9;
+        animation: taxi-move 9s linear 4s;
+        /* animation-iteration-count: infinite; */
+    }
+    &__driver-message {
+        position: absolute;
+        background: url('../img/animation/driver-message.png') no-repeat;
+        width: 164px;
+        height: 99px;
+        right: 26.5%;
+        top: 34%;
+        z-index: 11;
+        opacity: 0;
+        animation: driver-say 3s ease 6s;
+    }
+    &__glowing-lantern {
+        position: absolute;
+        top: 4%;
+        right: 11.2%;
+        background: url('../img/animation/glowing-lantern.png') no-repeat;
+        background-size: cover;
+        width: 215px;
+        height: 563px;
+        z-index: 20;
+    }
+    &__woman-massege {
+        position: absolute;
+        background: url('../img/animation/woman-message.png') no-repeat;
+        width: 161px;
+        height: 99px;
+        left: 6.5%;
+        top: 34%;
+        z-index: 10;
+        opacity: 0;
+        animation: woman-say 2s ease 3s;
+    }
+    &__woman {
+        position: absolute;
+        background: url('../img/animation/woman-sid.svg') no-repeat;
+        width: 98px;
+        height: 268px;
+        left: 13%;
+        top: 51%;
+        z-index: 10;
+    }
+    &__woman-arm {
+        position: absolute;
+        background: url('../img/animation/woman-arm.png') no-repeat;
+        width: 98px;
+        height: 100px;
+        left: 27%;
+        top: 41.5%;
+        transform: rotate(0deg);
+        transform-origin: 8px top;
+        z-index: 10;
+        animation: woman-arm-up 2s ease 3s;
+    }
+    
+    &__suitcases {
+        position: absolute;
+        background: url('../img/animation/suitcases.png') no-repeat;
+        width: 192px;
+        height: 96px;
+        left: 12.4%;
+        top: 78.5%;
+        z-index: 10;
+    }
+    &__man-massege {
+        position: absolute;
+        background: url('../img/animation/man-message.png') no-repeat;
+        width: 160px;
+        height: 77px;
+        left: 22.5%;
+        top: 24%;
+        z-index: 10;
+        opacity: 0;
+        animation: man-say 2s ease 5s;
+    }
+    &__man-massege-two {
+        position: absolute;
+        background: url('../img/animation/man-message-two.png') no-repeat;
+        width: 160px;
+        height: 77px;
+        left: 23.5%;
+        top: 24%;
+        z-index: 11;
+        opacity: 0;
+        animation: man-say-two 3s ease 10s;
+    }
+    &__man {
+        position: absolute;
+        background: url('../img/animation/man.png') no-repeat;
+        width: 205px;
+        height: 353px;
+        left: 23.5%;
+        top: 37.5%;
+        z-index: 10;
+    }
+    &__man-arm {
+        position: absolute;
+        background: url('../img/animation/man-arm.png') no-repeat;
+        width: 89px;
+        height: 128px;
+        transform-origin: -5px bottom;
+        transform: rotate(150deg);
+        top: 26.5%;
+        left: 25.3%;
+        z-index: 9;
+        animation: man-arm-up 2s ease 5s;
+    }
+}
+
+@keyframes sky {
+    100% {
+      transform: translateX(-200%);    
+    }
+  }
+
+@keyframes cars-move {
+    100% {
+      transform: translateX(800%);    
+    }
+  }
+
+@keyframes woman-say {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes man-say {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;  
+    }
+    100% {
+        opacity: 0;  
+    }
+}
+
+@keyframes man-say-two {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;  
+    }
+    100% {
+        opacity: 0;  
+    }
+}
+
+@keyframes woman-arm-up {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-45deg);    
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes man-arm-up {
+    0% {
+        transform: rotate(150deg);
+    }
+    50% {
+        transform: rotate(0deg); 
+    }
+    100% {
+        transform: rotate(150deg);
+    }
+}
+
+@keyframes taxi-move {
+    20% {
+        transform: translateX(-155%);
+    }
+    50% {
+        transform: translateX(-155%);
+    }
+    100% {
+      transform: translateX(-600%);    
+    }
+}
+
+@keyframes driver-say {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
