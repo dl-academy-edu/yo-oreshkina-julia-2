@@ -43,6 +43,7 @@
         background: url('../img/animation/cloud3.png') no-repeat;
         background-size: cover;
         margin-left: 356px;
+        margin-right: 271px;
         width: 208px;
         height: 38px;
         z-index: 2;
@@ -93,10 +94,11 @@
         overflow: hidden;
     }
     &__highway {
-        padding-top: 280px;
+        padding-top: 615px;
         width: 100%;
         overflow: hidden;
         display: flex;
+        position: relative;
     }
     &__card-one {
         background: url('../img/animation/car-one.png') no-repeat;
@@ -104,9 +106,9 @@
         width: 251px;
         height: 100px;
         position: absolute;
-        bottom: 39%;
-        left: -10%;
-        z-index: 2;
+        bottom: 36%;
+        left: -4%;
+        z-index: 4;
         animation: cars-move linear 7s forwards;
         animation-iteration-count: infinite;
     }
@@ -117,7 +119,7 @@
         height: 96px;
         position: absolute;
         bottom: 37%;
-        left: -5%;
+        left: 23.5%;
         z-index: 4;
         animation: cars-move linear 5s forwards;
         animation-iteration-count: infinite;
@@ -128,8 +130,8 @@
         width: 247px;
         height: 65px;
         position: absolute;
-        bottom: 38%;
-        left: -10%;
+        bottom: 40%;
+        left: 44.5%;
         z-index: 3;
         animation: cars-move linear 3s forwards;
         animation-iteration-count: infinite;
@@ -140,8 +142,8 @@
         width: 269px;
         height: 129px;
         position: absolute;
-        bottom: 36%;
-        left: -15%;
+        bottom: 34%;
+        right: -3%;
         z-index: 5;
         animation: cars-move linear 9s forwards;
         animation-iteration-count: infinite;
@@ -168,11 +170,12 @@
         background-size: cover;
         width: 887px;
         height: 266px;
-        top: 43%;
-        right: -100%;
+        right: -3%;
+        top: 42.5%;
         z-index: 9;
-        animation: taxi-move 9s linear 4s;
-        /* animation-iteration-count: infinite; */
+        transform: translateX(200%);
+        animation: taxi-move 10s linear 5s;
+        animation-iteration-count: infinite;
     }
     &__driver-message {
         position: absolute;
@@ -183,7 +186,8 @@
         top: 34%;
         z-index: 11;
         opacity: 0;
-        animation: driver-say 3s ease 6s;
+        animation: driver-say 10s ease 5s;
+        animation-iteration-count: infinite;
     }
     &__glowing-lantern {
         position: absolute;
@@ -204,7 +208,8 @@
         top: 34%;
         z-index: 10;
         opacity: 0;
-        animation: woman-say 2s ease 3s;
+        animation: woman-say 10s ease 5s;
+        animation-iteration-count: infinite;
     }
     &__woman {
         position: absolute;
@@ -222,10 +227,11 @@
         height: 100px;
         left: 27%;
         top: 41.5%;
-        transform: rotate(0deg);
+        transform: rotate(45deg);
         transform-origin: 8px top;
         z-index: 10;
-        animation: woman-arm-up 2s ease 3s;
+        animation: woman-arm-up 10s ease 5s;
+        animation-iteration-count: infinite;
     }
     
     &__suitcases {
@@ -242,29 +248,31 @@
         background: url('../img/animation/man-message.png') no-repeat;
         width: 160px;
         height: 77px;
-        left: 22.5%;
+        left: 19.5%;
         top: 24%;
         z-index: 10;
         opacity: 0;
-        animation: man-say 2s ease 5s;
+        animation: man-say 10s ease 5s;
+        animation-iteration-count: infinite;
     }
     &__man-massege-two {
         position: absolute;
         background: url('../img/animation/man-message-two.png') no-repeat;
         width: 160px;
         height: 77px;
-        left: 23.5%;
+        left: 19.5%;
         top: 24%;
         z-index: 11;
         opacity: 0;
-        animation: man-say-two 3s ease 10s;
+        animation: man-say-two 10s ease 5s;
+        animation-iteration-count: infinite;
     }
     &__man {
         position: absolute;
         background: url('../img/animation/man.png') no-repeat;
         width: 205px;
         height: 353px;
-        left: 23.5%;
+        left: 20.5%;
         top: 37.5%;
         z-index: 10;
     }
@@ -273,24 +281,32 @@
         background: url('../img/animation/man-arm.png') no-repeat;
         width: 89px;
         height: 128px;
-        transform-origin: -5px bottom;
-        transform: rotate(150deg);
-        top: 26.5%;
-        left: 25.3%;
+        left: 22%;
+        top: 29%;
         z-index: 9;
-        animation: man-arm-up 2s ease 5s;
+        transform: rotate(150deg);
+        transform-origin: -3px bottom;
+        animation: man-arm-up 10s ease 5s;
+        animation-iteration-count: infinite;
     }
 }
 
 @keyframes sky {
+    0% {
+        transform: translateX(200%);      
+      }
     100% {
-      transform: translateX(-200%);    
-    }
+        transform: translateX(0%);      
+      }
   }
 
 @keyframes cars-move {
+    0% {
+        transform: translateX(-600%);    
+      }
+
     100% {
-      transform: translateX(800%);    
+      transform: translateX(600%);    
     }
   }
 
@@ -298,8 +314,11 @@
     0% {
         opacity: 0;
     }
-    50% {
+    20% {
         opacity: 1;
+    }
+    25% {
+        opacity: 0;
     }
     100% {
         opacity: 0;
@@ -310,8 +329,14 @@
     0% {
         opacity: 0;
     }
-    50% {
+    20% {
+        opacity: 0;
+    }
+    30% {
         opacity: 1;  
+    }
+    40% {
+        opacity: 0;  
     }
     100% {
         opacity: 0;  
@@ -323,7 +348,13 @@
         opacity: 0;
     }
     50% {
+        opacity: 0;
+    }
+    60% {
         opacity: 1;  
+    }
+    80% {
+        opacity: 0;  
     }
     100% {
         opacity: 0;  
@@ -334,8 +365,11 @@
     0% {
         transform: rotate(0deg);
     }
-    50% {
+    20% {
         transform: rotate(-45deg);    
+    }
+    25% {
+        transform: rotate(0deg);
     }
     100% {
         transform: rotate(0deg);
@@ -345,21 +379,34 @@
 @keyframes man-arm-up {
     0% {
         transform: rotate(150deg);
+        transform-origin: -3px bottom;
     }
-    50% {
-        transform: rotate(0deg); 
+    20% {
+        transform: rotate(150deg);
+        transform-origin: -3px bottom;
+    }
+    30% {
+        transform: rotate(0deg);
+    }
+    40% {
+        transform: rotate(150deg);
+        transform-origin: -3px bottom;
     }
     100% {
         transform: rotate(150deg);
+        transform-origin: -3px bottom;
     }
 }
 
 @keyframes taxi-move {
-    20% {
-        transform: translateX(-155%);
+    0% {
+        transform: translateX(200%);
+    }
+    35% {
+        transform: translateX(0%);
     }
     50% {
-        transform: translateX(-155%);
+        transform: translateX(0%);
     }
     100% {
       transform: translateX(-600%);    
@@ -370,8 +417,14 @@
     0% {
         opacity: 0;
     }
+    30% {
+        opacity: 0;
+    }
     50% {
         opacity: 1;
+    }
+    55% {
+        opacity: 0;
     }
     100% {
         opacity: 0;
