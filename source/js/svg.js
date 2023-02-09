@@ -2,8 +2,8 @@ window.addEventListener('DOMContentLoaded', function() {
 
 const btnPlan = document.querySelector('.svg__button--left');
 const btndream = document.querySelector('.svg__button--right');
-const lines = document.querySelectorAll('.svg__notepad-line--left');
-const sun = document.querySelector('.svg__notepad-sun');
+const lines = document.querySelectorAll('.svg__desktop-line--left');
+const sun = document.querySelector('.svg__desktop-sun');
 const starOne = document.querySelector('.svg__star-one');
 const starTwo = document.querySelector('.svg__star-two');
 const starThree = document.querySelector('.svg__star-three');
@@ -11,9 +11,9 @@ const starThree = document.querySelector('.svg__star-three');
 
 function startAnimationNotepad() {
     btnPlan.addEventListener('click', () => {
-        sun.classList.toggle('svg__notepad-sun--show');
+        sun.classList.toggle('svg__desktop-sun--show');
         for (let i = 0; i < lines.length; i++) {
-            lines[i].classList.toggle('svg__notepad-line--show');
+            lines[i].classList.toggle('svg__desktop-line--show');
         }
     });
 }
