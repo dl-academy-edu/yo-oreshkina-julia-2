@@ -1,0 +1,161 @@
+.svg {
+    position: relative;
+    height: 760px;
+    &__inner-button {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+    &__button {
+        background-color: $white;
+        animation: pulsed-btn ease 2s forwards;
+        animation-iteration-count: infinite;
+        @for $i from 1 through 2 {
+          &:nth-child(#{$i}) {
+            animation-delay: $i + 2s;
+          }
+        }
+    }
+    &__arrow--path {
+        transition: 0.4s;
+    }
+    &__arrow--path:hover {
+        cursor: pointer;
+        fill: $secondary;
+        stroke: $secondary;
+    }
+    &__wrap {
+        position: relative;
+        width: 100%;
+        height: 85%;
+        display: flex;
+        flex-direction: row;
+    }
+    &__inner-planning {
+        @include elem-flex-center;
+        width: 100%;
+    }
+    &__notepad {
+        filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.2));
+    }
+    &__notepad-line--left, &__notepad-line--right {
+        stroke-width: 14px;
+        stroke-linecap: round;
+    }
+    &__notepad-line--show {
+        transform: translateX(-55%);
+        animation: move-line-left ease 1s forwards;
+        @for $i from 1 through 17 {
+          &:nth-child(#{$i}) {
+            animation-delay: $i + 1s;
+          }
+        }
+    }
+    
+    &__notepad-sun--show {
+        animation: move-sun linear 14s forwards 5s;
+    }
+    &__pyramid--shadow {
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+    &__inner-dreams {
+        position: relative;
+        width: 100%;
+        @include elem-flex-center;
+    }
+    &__star-one {
+        position: absolute;
+        right: 135px;
+        top: 160px;
+        transform: scale(0);
+    }
+    &__star-one--show {
+        animation: starfall 5s linear forwards 2s;
+        animation-iteration-count: infinite;
+    }
+    &__star-two {
+        position: absolute;
+        right: 35px;
+        top: 140px;
+        transform: scale(0);
+    }
+    &__star-two--show {
+        animation: starfall 5s linear forwards;
+        animation-iteration-count: infinite;
+    }
+    &__star-three {
+        position: absolute;
+        right: 65px;
+        top: 180px;
+        transform: scale(0);
+    }
+    &__star-three--show {
+        animation: starfall 5s linear forwards 3s;
+        animation-iteration-count: infinite;
+    }
+}
+
+@keyframes starfall {
+    0% {
+        transform: scale(0) translate(0, 0);
+        opacity: 1;
+    }
+    25% {
+        opacity: 1;
+        transform: scale(0.2) translate(-75px, 39px);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(0.5) translate(-150px, 80px);
+    }
+    75% {
+        opacity: 0.5;
+        transform: scale(0.8) translate(-220px, 129px);
+    }
+    
+    100% {
+        opacity: 0;
+        transform: scale(1) translate(-250px, 150px);
+    }
+}
+
+@keyframes pulsed-btn {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+} 
+
+@keyframes move-line-left {
+    0% {
+        transform: translateX(-55%);      
+      }
+    100% {
+        transform: translateX(0%);      
+      }
+} 
+ 
+@keyframes move-sun {
+    0% {
+        transform: translate(0,0);      
+      }
+    20% {
+        transform: translate(6.25%,-2.4%);      
+      }
+    50% {
+        transform: translate(12.5%,-4%);      
+      }
+    80% {
+        transform: translate(18.75%,-2.4%);
+    }
+    100% {
+        transform: translate(25%, 0);      
+      }
+} 
