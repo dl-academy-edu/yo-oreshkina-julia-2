@@ -9,16 +9,22 @@ const starTwo = document.querySelector('.svg__star-two');
 const starThree = document.querySelector('.svg__star-three');
 
 
-function startAnimationNotepad() {
+function startAnimationDesktop() {
     btnPlan.addEventListener('click', () => {
-        sun.classList.toggle('svg__desktop-sun--show');
-        for (let i = 0; i < lines.length; i++) {
-            lines[i].classList.toggle('svg__desktop-line--show');
-        }
+        sun.classList.remove('svg__desktop-sun--show');
+        lines.forEach(function(item) {
+            item.classList.remove('svg__desktop-line--show');
+        });
+        setTimeout(function(){
+            sun.classList.add('svg__desktop-sun--show');
+            for (let i = 0; i < lines.length; i++) {
+                lines[i].classList.add('svg__desktop-line--show');
+            }
+        }, 0);
     });
 }
 
-startAnimationNotepad();
+startAnimationDesktop();
 
 
 function startAnimationStarfall() {
