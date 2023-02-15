@@ -1,15 +1,19 @@
 .button {
   @include elem-flex-center;
-    padding: 0 22px;
+    padding: 8px 22px;
     text-transform: uppercase;
     font-family: $open-sans;
     font-weight: bold;
     line-height: 22px;
     color: $white;
-    min-height: 40px;
+    /* min-height: 40px; */
     background: $black;
     margin-right: auto;
     transition: 0.4s;
+    @media (max-width: $media-mobile-landscape) {
+      padding: 8px 20px;
+      @include mobile-font-style;
+    }
   }
   
   .button:hover {

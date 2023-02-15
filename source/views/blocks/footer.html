@@ -5,48 +5,56 @@
               <h2 class="visually-hidden">Navigation</h2>
               <p class="footer__subtitle">Navigation</p>
               <ul class="footer__list">
-                @@include('blocks/footer__item.html',
-                {"footerLinkPath": "#",
-                "footerLinkname": "About Us"})
-                @@include('blocks/footer__item.html',
-                {"footerLinkPath": "./blog.html",
-                "footerLinkname": "Blog"})
-                @@include('blocks/footer__item.html',
-                {"footerLinkPath": "#",
-                "footerLinkname": "Design Services"})
-                @@include('blocks/footer__item.html',
-                {"footerLinkPath": "#",
-                "footerLinkname": "Featured On"})
-                @@include('blocks/footer__item.html',
-                {"footerLinkPath": "#",
-                "footerLinkname": "2018 Holiday Catalog"})
-                @@include('blocks/footer__item.html',
-                {"footerLinkPath": "#",
-                "footerLinkname": "Shop By Designer"})
+                <div class="footer__list-inner">
+                    @@include('blocks/footer__item.html',
+                    {"footerLinkPath": "#",
+                    "footerLinkname": "About Us"})
+                    @@include('blocks/footer__item.html',
+                    {"footerLinkPath": "./blog.html",
+                    "footerLinkname": "Blog"})
+                    @@include('blocks/footer__item.html',
+                    {"footerLinkPath": "#",
+                    "footerLinkname": "Design Services"})
+                </div>
+                <div class="footer__list-inner">
+                    @@include('blocks/footer__item.html',
+                    {"footerLinkPath": "#",
+                    "footerLinkname": "Featured On"})
+                    @@include('blocks/footer__item.html',
+                    {"footerLinkPath": "#",
+                    "footerLinkname": "2018 Holiday Catalog"})
+                    @@include('blocks/footer__item.html',
+                    {"footerLinkPath": "#",
+                    "footerLinkname": "Shop By Designer"})
+                </div>
               </ul>
           </section>
           <section class="footer__column">
               <h2 class="visually-hidden">Customer Information</h2>
               <p class="footer__subtitle">Customer Information</p>
               <ul class="footer__list">
-                @@include('blocks/footer__item.html',
-                {"footerLinkPath": "./contact.html",
-                "footerLinkname": "Contact Us"})
-                @@include('blocks/footer__item.html',
-                {"footerLinkPath": "#",
-                "footerLinkname": "Sale Exclusions"})
-                @@include('blocks/footer__item.html',
-                {"footerLinkPath": "#",
-                "footerLinkname": "Shipping & Returns"})
-                @@include('blocks/footer__item.html',
-                {"footerLinkPath": "#",
-                "footerLinkname": "Terms & Conditions"})
-                @@include('blocks/footer__item.html',
-                {"footerLinkPath": "#",
-                "footerLinkname": "Privacy Policy"})
-                @@include('blocks/footer__item.html',
-                {"footerLinkPath": "#",
-                "footerLinkname": "Search"})
+                <div class="footer__list-inner">
+                    @@include('blocks/footer__item.html',
+                    {"footerLinkPath": "./contact.html",
+                    "footerLinkname": "Contact Us"})
+                    @@include('blocks/footer__item.html',
+                    {"footerLinkPath": "#",
+                    "footerLinkname": "Sale Exclusions"})
+                    @@include('blocks/footer__item.html',
+                    {"footerLinkPath": "#",
+                    "footerLinkname": "Shipping & Returns"})
+                </div>
+                <div class="footer__list-inner">
+                    @@include('blocks/footer__item.html',
+                    {"footerLinkPath": "#",
+                    "footerLinkname": "Terms & Conditions"})
+                    @@include('blocks/footer__item.html',
+                    {"footerLinkPath": "#",
+                    "footerLinkname": "Privacy Policy"})
+                    @@include('blocks/footer__item.html',
+                    {"footerLinkPath": "#",
+                    "footerLinkname": "Search"})
+                </div>
               </ul>
           </section>
           <section class="footer__column">
@@ -89,7 +97,7 @@
               Company Rating
           </div> 
       </section>
-      <p class="footer__column footer__copyright">Copyright &copy; 2018 Dlk • Design Life Kids;</p>
+      <p class="footer__column footer__copyright">Copyright &copy; 2018 Dlk • Design Life Kids</p>
       <a class="footer__column footer__designer" href="https://directline.digital/" target="_blank">Web Design — Direct Line Development</a>
       </div>
       </div>

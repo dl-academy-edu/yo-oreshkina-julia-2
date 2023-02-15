@@ -1,11 +1,17 @@
 .footer__item {
     margin: 15px 0;
-  }
+    @media (max-width: 562px) {
+        margin: 7.5px 0;
+      }
+}
   
 .footer__link {
     color: $white;
     font-size: 16px;
     line-height: 22px;
+    @media (max-width: 635px) {
+        @include mobile-font-style;
+      }
 }
 
 .footer__link:hover {

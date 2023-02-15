@@ -26,3 +26,28 @@
   align-items: center;
   justify-content: center;
 }
+
+@mixin mobile-font-style {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@mixin card-size-main-tablet {
+  width: 259px;
+  height: 249px;
+}
+
+@mixin card-size-main-mobile {
+  width: 247px;
+  height: 238px;
+}
+
+@mixin card-size-catalog-tablet {
+  width: 196px;
+  height: 196px;
+}
+
+@mixin card-size-catalog-mobile {
+  width: 160px;
+  height: 154px;
+}

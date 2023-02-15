@@ -35,6 +35,18 @@
 .card_2 {
   background-color: #EADDD3;
 }
+.card_2 > img {
+  @media (max-width: $media-tablet-landscape) {
+    object-fit: contain;
+    width: 191px;
+    height: 255px;
+  }
+  @media (max-width: $media-mobile-landscape) {
+    object-fit: contain;
+    width: 183px;
+    height: 215px;
+  }
+}
 
 .card_3 {
   background-color: #F8F2DA;
@@ -49,4 +61,21 @@
 
 .card_6 {
   background-color: #E5EAF8;
+}
+
+.card__main-size {
+  @media (max-width: $media-tablet-landscape) {
+    @include card-size-main-tablet;
+  }
+  @media (max-width: $media-mobile-landscape) {
+    @include card-size-main-mobile;
+  }
+}
+.card__catalog-size {
+  @media (max-width: $media-tablet-landscape) {
+    @include card-size-catalog-tablet;
+  }
+  @media (max-width: $media-mobile-landscape) {
+    @include card-size-catalog-mobile;
+  }
 }
