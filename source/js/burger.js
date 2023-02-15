@@ -1,5 +1,5 @@
 const btnOpenedBurger = document.querySelector('.menu-btn--open');
-const burgerMenu = document.querySelector('.header__burger');
+const burgerMenu = document.querySelector('.header__burger-wrapper');
 const btnClosedBurger = document.querySelector('.menu-btn--close');
 
 function openBurgerMenu() {
@@ -14,6 +14,11 @@ openBurgerMenu();
 
 function closeBurgerMenu() {
     btnClosedBurger.addEventListener('click', () => {
+        burgerMenu.classList.add('visually-hidden');
+        document.body.classList.remove('no-scroll');
+    });
+
+    burgerMenu.addEventListener('click', () => {
         burgerMenu.classList.add('visually-hidden');
         document.body.classList.remove('no-scroll');
     });
