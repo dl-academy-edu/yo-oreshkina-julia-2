@@ -29,7 +29,9 @@ h1, h2 {
   text-transform: uppercase;
   font-size: 40px;
   line-height: 44px;
-  @media (max-width: $media-tablet-landscape) {
+}
+h1 {
+  @media (max-width: $media-mobile-landscape) {
     font-size: 36px;
   }
 }

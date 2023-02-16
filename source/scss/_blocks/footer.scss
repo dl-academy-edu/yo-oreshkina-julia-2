@@ -97,6 +97,10 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    @media (max-width: $media-tablet-landscape) {
+      padding-top: 24px;
+      padding-bottom: 70px;
+    }
   }
   &__inner > &__column:first-child {
     @media (max-width: $media-tablet-landscape) {

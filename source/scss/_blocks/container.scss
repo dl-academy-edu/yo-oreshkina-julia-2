@@ -1,10 +1,7 @@
 .container {
   max-width: 1180px;
   margin: 0 auto;
-  
-  @media (max-width: $media-tablet-landscape) {
-    max-width: 866px;
-  }
+
   @media (max-width: $media-tablet) {
     max-width: 648px;
   }

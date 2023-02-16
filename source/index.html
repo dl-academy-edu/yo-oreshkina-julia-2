@@ -2,7 +2,7 @@
 <html lang="en" class="no-js">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google" content="notranslate">
     <meta name="format-detection" content="telephone=no">
 
@@ -74,7 +74,11 @@
     </section>
     <section class="container services">
         <h2 class="visually-hidden">Services</h2>
-        <img class="services__photo" src="./img/photo.jpg" alt="designer DLK" width="480" height="559">
+        <picture>
+            <source srcset="./img/photo-tablet.jpg, ./img/photo-tablet-2x.jpg 2x" media="(min-width: 426px) and (max-width: 768px)">
+            <source srcset="./img/photo-mobile.jpg, ./img/photo-mobile-2x.jpg 2x" media="(max-width: 425px)">
+            <img class="services__photo" srcset="./img/photo.jpg, ./img/photo-2x.jpg 2x" alt="designer DLK">
+        </picture>
         <div class="services__inner">
             <h2 class="services__title">Delivery</h2>
             <ul class="services__list">
