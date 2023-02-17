@@ -94,6 +94,9 @@
     margin: 0;
     max-width: 580px;
     line-height: 20px;
+    @media (max-width: $media-tablet) {
+      @include mobile-font-style;
+    }
   }
 }
 
@@ -223,6 +226,7 @@
     padding-bottom: 18px;
     @media (max-width: $media-tablet) {
       line-height: 18px;
+      font-size: 14px;
     }
     @media (max-width: $media-tablet) {
       padding-bottom: 12px;
@@ -298,6 +302,7 @@
     }
     @media (max-width: $media-mobile-landscape) {
       margin: 10px 15px;
+      @include mobile-font-style;
     }
   }
   &__buy-link {
@@ -323,6 +328,7 @@
     margin: 20px 30px;
     @media (max-width: $media-mobile-landscape) {
       margin: 10px 15px;
+      @include mobile-font-style;
     }
   }
   &__map {

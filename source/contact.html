@@ -24,7 +24,7 @@
 <body>
     @@include('blocks/header.html')
     <main class="container">
-        <h1 class="contact__title">CONTACT US</h1>
+        <h2 class="contact__title">CONTACT US</h2>
         <ul class="breadcrumbs">
             @@include('blocks/breadcrumbs.html', 
             {"breadcrumbsPath": "/",
@@ -35,7 +35,8 @@
         </ul>
         <div class="contact__wrapper">
             @@include('blocks/form.html', 
-            {"checkboxId": "agree",
+            {"addClass": "contact__form--width",
+              "checkboxId": "agree",
             "checkboxFor": "agree",
             "atr": "checked"})
             <section class="contact__info">

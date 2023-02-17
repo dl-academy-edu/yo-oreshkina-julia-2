@@ -20,6 +20,12 @@
     @media (max-width: 562px) {
       width: 100%;
       margin: 0 20px;
+      padding-bottom: 0;
+    }
+  }
+  &__column:nth-of-type(3) {
+    @media (max-width: $media-mobile-landscape) {
+      margin-top: 20px;
     }
   }
   &__subtitle {
@@ -100,6 +106,10 @@
     @media (max-width: $media-tablet-landscape) {
       padding-top: 24px;
       padding-bottom: 70px;
+      gap: 15px;
+    }
+    @media (max-width: 562px) {
+      gap: 15px;
     }
   }
   &__inner > &__column:first-child {

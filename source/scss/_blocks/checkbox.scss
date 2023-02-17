@@ -3,6 +3,12 @@
     display: flex;
     align-items:center;
     margin-left: 34px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    @media (max-width: $media-mobile) {
+        align-items: start;
+      }
 }
   
 .checkbox__input {
