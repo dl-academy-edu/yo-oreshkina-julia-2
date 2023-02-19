@@ -24,7 +24,7 @@
 <body>
     @@include('blocks/header.html')
     <main class="container catalog">
-        <h1 class="catalog__title">Category Products</h1>
+        <h2 class="catalog__title">Category Products</h2>
         <ul class="breadcrumbs">
             @@include('blocks/breadcrumbs.html', 
             {"breadcrumbsPath": "/",
@@ -40,20 +40,25 @@
             "cardImg": "./img/apparel-kids.png",
             "cardAlt": "apparel kids",
             "cardLink": "#",
+            "linkStyle": "products-card__link--media",
             "cardName": "apparel kids"})
             @@include('blocks/products-card.html',
             {"cardColor": "card_2",
             "cardSize": "card__catalog-size",
             "cardImg": "./img/sock.png",
+            "imgSize": "img_2--media",
             "cardAlt": "holiday shop",
             "cardLink": "#",
+            "linkStyle": "products-card__link--media",
             "cardName": "holiday shop"})
             @@include('blocks/products-card.html',
             {"cardColor": "card_3",
             "cardSize": "card__catalog-size",
             "cardImg": "./img/toy.png",
+            "imgSize": "img_3--media",
             "cardAlt": "toys",
             "cardLink": "./toys.html",
+            "linkStyle": "products-card__link--media",
             "cardName": "toys"})
             <li class="catalog__item--empty"></li>
             <li class="catalog__item--empty"></li>
@@ -61,15 +66,19 @@
             {"cardColor": "card_4",
             "cardSize": "card__catalog-size",
             "cardImg": "./img/drowing.png",
+            "imgSize": "img_4--media",
             "cardAlt": "accessories",
             "cardLink": "#",
+            "linkStyle": "products-card__link--media",
             "cardName": "accessories"})
             @@include('blocks/products-card.html',
             {"cardColor": "card_5",
             "cardSize": "card__catalog-size",
             "cardImg": "../img/sale.png",
+            "imgSize": "img_5--media",
             "cardAlt": "sale",
             "cardLink": "#",
+            "linkStyle": "products-card__link--media",
             "cardName": "sale"})
             @@include('blocks/products-card.html',
             {"cardColor": "card_6",
@@ -77,6 +86,7 @@
             "cardImg": "../img/apparel-adults.png",
             "cardAlt": "apparel adults",
             "cardLink": "#",
+            "linkStyle": "products-card__link--media",
             "cardName": "apparel adults"})
         </ul>
         <section class="container catalog__desc">

@@ -26,6 +26,16 @@
       cursor:pointer;
       text-decoration-line: underline;
     }
+    &__link--media {
+      @media (max-width: $media-tablet) {
+        font-size: 24px;
+        line-height: 30px;
+      }
+      @media (max-width: $media-mobile-landscape) {
+        font-size: 18px;
+        line-height: 20px;
+      }
+    }
   }
   
 .card_1 {
@@ -34,29 +44,37 @@
 
 .card_2 {
   background-color: #EADDD3;
-}
-.card_2 > img {
-  @media (max-width: $media-tablet-landscape) {
-    object-fit: contain;
-    width: 191px;
-    height: 255px;
-  }
-  @media (max-width: $media-mobile-landscape) {
-    object-fit: contain;
-    width: 183px;
-    height: 215px;
+  .img_2--media {
+    @media (max-width: $media-tablet-landscape) {
+      width: 75%;
+    }
   }
 }
 
 .card_3 {
   background-color: #F8F2DA;
+  .img_3--media {
+    @media (max-width: $media-tablet-landscape) {
+      width: 90%;
+    }
+  }
 }
 .card_4 {
   background-color: #D5D4E1;
+  .img_4--media {
+    @media (max-width: $media-tablet-landscape) {
+      width: 90%;
+    }
+  }
 }
 
 .card_5 {
   background-color: #F3D0DB;
+  .img_5--media {
+    @media (max-width: $media-tablet-landscape) {
+      width: 85%;
+    }
+  }
 }
 
 .card_6 {
