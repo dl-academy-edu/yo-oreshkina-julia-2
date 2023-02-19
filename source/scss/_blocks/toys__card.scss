@@ -4,14 +4,18 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        flex: 1 1 30%;
+        @media (max-width: 425px) {
+            flex: 1 1 45%;
+        }
     }
     &__link {
         position: absolute;
         @include elem-flex-center;
         top: 21%;
         left: 23%;
-        width: 207px;
-        height: 207px;
+        width: 54.7%;
+        height: 41.4%;
         background-color: #E5EAF8;
         opacity: 0; 
     
@@ -20,7 +24,18 @@
         font-size: 26px;
         line-height: 29px;
         text-transform: uppercase;
+        text-align: center;
         text-shadow: 0px 0px 40px rgba(147, 3, 3, 0.25);
+        @media (max-width: $media-tablet-landscape) {
+            font-size: 22px;
+        }
+        @media (max-width: $media-tablet-landscape) {
+            @include mobile-font-style;
+        }
+        @media (max-width: $media-mobile-landscape) {
+            font-size: 10px;
+            
+        }
     }
     &__img:hover + .toys__link, .toys__link:hover {
         opacity: 0.9; 
@@ -30,15 +45,39 @@
     }
     &__img {
         margin-bottom: 30px;
+        height: auto;
+        @media (max-width: $media-tablet) {
+            width: 203px;
+            margin-bottom: 15px;
+        }
+        @media (max-width: $media-mobile-landscape) {
+            width: 160px;
+            margin-bottom: 10px;
+        }
     }
     &__name {
-        font-size: 14px;
-        line-height: 20px;
+        @include mobile-font-style;
         margin-bottom: 15px;
         text-transform: uppercase;
+        text-align: center;
+        @media (max-width: $media-tablet) {
+            font-size: 12px;
+            line-height: 16px;
+            margin-bottom: 5px;
+        }
+        
     }
     &__cost {
         font-weight: bold;
         margin-bottom: 28px;
+        @media (max-width: $media-tablet) {
+            @include mobile-font-style;
+            margin-bottom: 20px;
+        }
+        @media (max-width: $media-mobile-landscape) {
+            font-size: 12px;
+            line-height: 16px;
+            margin-bottom: 15px;
+        }
     }
 }

@@ -8,6 +8,7 @@
     line-height: 16px;
     @media (max-width: $media-mobile) {
         align-items: start;
+        margin-left: 30px;
       }
 }
   
@@ -28,7 +29,12 @@
     background-color:inherit; 
     border-radius: 3px;
     box-shadow: 0 0 0 2px $secondary;
-    transition: 0.4s;  
+    transition: 0.4s;
+    @media (max-width: $media-mobile) {
+        width: 15px;
+        height: 15px;
+        margin-left: -30px;
+      }  
 }
 
 .checkbox__input:disabled + .checkbox__label::after {
