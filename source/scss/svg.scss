@@ -4,15 +4,27 @@
     $timeAnimForLine: math.div($timeAnimForSun, $countOfLines);
 .svg {
     position: relative;
-    height: 760px;
-    &__inner-button {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        gap: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    flex-direction: row;
+
+    @media (max-width: $media-desktop) {
+        flex-direction: column;
+        align-items:center;
+        margin: 30px auto;
     }
+    @media (max-width: $media-mobile-landscape) {
+        gap: 5px;
+    }
+
     &__button {
+        flex: 0 1 auto;
+        height: 5%;
+        width: 40%;
         background-color: $white;
         animation: pulsed-btn linear 2s forwards;
         animation-iteration-count: infinite;
@@ -22,6 +34,16 @@
           }
         }
     }
+    &__button--left {
+        @media (max-width: $media-desktop) {
+            order: 1;
+          }
+    }
+    &__button--right {
+        @media (max-width: $media-desktop) {
+            order: 3;
+          }
+    }
     &__arrow--path {
         transition: 0.4s;
     }
@@ -30,16 +52,13 @@
         fill: $secondary;
         stroke: $secondary;
     }
-    &__wrap {
-        position: relative;
-        width: 100%;
-        height: 85%;
-        display: flex;
-        flex-direction: row;
-    }
     &__inner-desktop {
         @include elem-flex-center;
-        width: 100%;
+        width: 48%;
+        @media (max-width: $media-desktop) {
+            order: 2;
+            width: 100%;
+          }
     }
     &__desktop {
         filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.2));
@@ -67,13 +86,18 @@
     }
     &__inner-dreams {
         position: relative;
-        width: 100%;
         @include elem-flex-center;
+        @media (max-width: $media-desktop) {
+            order: 4;
+          }
+    }
+    &__dreams {
+        height: auto;
     }
     &__star-one {
         position: absolute;
-        right: 135px;
-        top: 160px;
+        right: 24%;
+        top: 5%;
         transform: scale(0);
     }
     &__star-one--show {
@@ -82,8 +106,8 @@
     }
     &__star-two {
         position: absolute;
-        right: 35px;
-        top: 140px;
+        right: 5%;
+        top: 3%;
         transform: scale(0);
     }
     &__star-two--show {
@@ -92,8 +116,8 @@
     }
     &__star-three {
         position: absolute;
-        right: 65px;
-        top: 180px;
+        right: 10%;
+        top: 15%;
         transform: scale(0);
     }
     &__star-three--show {
