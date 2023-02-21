@@ -4,7 +4,7 @@
         font-size: 36px
     }
     &__inner {
-        height: 768px;
+        max-height: 100%;
     }
     &__sky {
         position: relative;
@@ -18,59 +18,43 @@
         display: flex;
         flex-direction: row;
         overflow: hidden;
+        margin-bottom: 5px;
     }
     &__row > div {
+        display: flex;
+        align-items: flex-start;
+        height: max-content;
         animation: sky linear 60s forwards;
         animation-iteration-count: infinite;
     }
     &__cloud-one {
-        margin-left: 80px;
-        background: url('../img/animation/cloud1.png') no-repeat;
-        background-size: cover;
-        width: 91px;
-        height:26px;
+        margin-left: 6%;
         z-index: 2;
     }
     &__cloud-two {
-        background: url('../img/animation/cloud2.png') no-repeat;
-        background-size: cover;
-        margin-left: 442px;
-        width: 158px;
-        height: 32px;
+       margin-left: 32%;
         z-index: 2;
     }
     &__cloud-three {
-        background: url('../img/animation/cloud3.png') no-repeat;
-        background-size: cover;
-        margin-left: 356px;
-        margin-right: 271px;
-        width: 208px;
-        height: 38px;
+       margin-left: 25%;
         z-index: 2;
     }
     &__cloud-four {
-        background: url('../img/animation/cloud4.png') no-repeat;
-        background-size: cover;
-        margin-left: 210px;
-        width: 108px;
-        height:26px;
+       margin-left: 34%;
         z-index: 2;
+        @media (max-width: $media-tablet-landscape) {
+            margin-left: 28%;
+        }
     }
     &__cloud-five {
-        margin-left: 147px;
-        background: url('../img/animation/cloud5.png') no-repeat;
-        background-size: cover;
-        width: 164px;
-        height: 33px;
+        margin-left: 13%;
         z-index: 2;
+        @media (max-width: $media-tablet-landscape) {
+            margin-left: 7%;
+        }
     }
     &__cloud-six {
-        background: url('../img/animation/cloud5.png') no-repeat;
-        background-size: cover;
-        margin-left: 726px;
-        margin-top: 12px;
-        width: 200px;
-        height: 41px;
+        margin-left: 45%;
         z-index: 2;
     }
     &__sun {
@@ -107,7 +91,7 @@
         position: absolute;
         bottom: 36%;
         left: -4%;
-        z-index: 4;
+        z-index: 5;
         animation: cars-move linear 7s forwards;
         animation-iteration-count: infinite;
         &__wheel-one {
@@ -197,7 +181,7 @@
         position: absolute;
         bottom: 34%;
         right: -3%;
-        z-index: 5;
+        z-index: 6;
         animation: cars-move linear 9s forwards;
         animation-iteration-count: infinite;
         &__wheel-one {
@@ -337,7 +321,7 @@
         background: url('../img/animation/man-message.png') no-repeat;
         width: 160px;
         height: 77px;
-        left: 19.5%;
+        left: 20.5%;
         top: 24%;
         z-index: 10;
         opacity: 0;
@@ -361,7 +345,7 @@
         background: url('../img/animation/man.png') no-repeat;
         width: 205px;
         height: 353px;
-        left: 20.5%;
+        left: 21.5%;
         top: 37.5%;
         z-index: 10;
     }
@@ -370,12 +354,12 @@
         background: url('../img/animation/man-arm.png') no-repeat;
         width: 89px;
         height: 128px;
-        left: 22%;
-        top: 29%;
+        left: 21.5%;
+        top: 31%;
         z-index: 9;
-        transform: rotate(150deg);
-        transform-origin: -3px bottom;
-        animation: man-arm-up 10s ease 5s;
+        transform: translate(15px, -30px) rotate(150deg);
+        transform-origin: left bottom;
+        animation: man-arm-up 10s ease 5s forwards;
         animation-iteration-count: infinite;
     }
 }
@@ -476,23 +460,19 @@
 
 @keyframes man-arm-up {
     0% {
-        transform: rotate(150deg);
-        transform-origin: -3px bottom;
+        transform: translate(15px, -30px) rotate(150deg);
     }
     20% {
-        transform: rotate(150deg);
-        transform-origin: -3px bottom;
+        transform: translate(15px, -30px) rotate(150deg);
     }
     30% {
-        transform: rotate(0deg);
+        transform: translate(0, 0) rotate(0deg);
     }
     40% {
-        transform: rotate(150deg);
-        transform-origin: -3px bottom;
+        transform: translate(15px, -30px) rotate(150deg);
     }
     100% {
-        transform: rotate(150deg);
-        transform-origin: -3px bottom;
+        transform: translate(15px, -30px) rotate(150deg);
     }
 }
 
