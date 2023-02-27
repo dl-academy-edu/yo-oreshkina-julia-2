@@ -27,11 +27,6 @@
   justify-content: center;
 }
 
-@mixin mobile-font-style {
-  font-size: 14px;
-  line-height: 20px;
-}
-
 @mixin card-size-main-tablet {
   width: 259px;
   height: 249px;
@@ -50,4 +45,35 @@
 @mixin card-size-catalog-mobile {
   width: 160px;
   height: 154px;
+}
+
+/* --- FONTS --- */
+
+@mixin mobile-font-style {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@mixin lato-bold {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+@mixin lato-info {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+@mixin lato-description {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
 }

@@ -1,0 +1,223 @@
+.grid {
+    &__inner {
+        margin: 0 auto;
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(7, 215px);
+    }
+    &__box {
+        @include elem-flex-center;
+    }
+    &__box-one{
+        grid-column: 1/3;
+        grid-row: 1/3;
+        padding: 0 80px;
+        gap: 70px;
+    }
+    &__box-inner {
+        display: flex;
+        flex-direction: column;
+        gap: 10px; 
+    }
+    &__box-name {
+        @include lato-bold;
+        color: $grid-text-grey;
+        text-transform: uppercase;
+    }
+    &__subtitle {
+        @include lato-description;
+        color: $grid-text;
+        margin-bottom: 10px;
+    }
+    &__link {
+        @include lato-info;
+        color: $grid-text-grey;
+    }
+    &__iphone-img {
+        align-self: flex-end;
+    }
+    &__box-two{
+        background-color:  #F7F8FA;
+        grid-column: 3/5;
+        grid-row: 1/3;
+        @extend .grid__box-inner;
+        padding: 0 125px;
+    }
+    &__link-more {
+        @include lato-bold;
+        text-transform: uppercase;
+    }
+    &__box-heading {
+        margin-top: 10px;
+        font-family: 'Lato';
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 58px;
+        text-align: center;
+    }
+    &__link--download {
+        color: $grid-link-blue;
+        text-decoration-line: underline;
+    }
+    &__box-three{
+        background-color: #EF5539;
+        grid-column: 1/2;
+        grid-row: 3/5;
+        @extend .grid__box-inner;
+    }
+    &__subtitle-keyboard {
+        color: $white;
+        max-width: 170px;
+        text-align: center;
+    }
+    &__link-more--yellow {
+        color:$grid-link-yellow;
+    }
+    &__box-four{
+        grid-column: 2/4;
+        grid-row: 3/5;
+        align-items:flex-start;
+    }
+    &__box--two-column {
+        @extend .grid__box-inner;
+        padding-top: 108px;
+        width: 50%;
+    }
+    &__imac-img {
+        margin-top: 43px;
+        align-self: flex-end;
+    }
+    &__link-more--blue {
+        color:$grid-link-blue;
+    }
+    &__desc {
+        padding-right: 95px;
+        margin-bottom: 10px;
+        @include lato-info;
+        color: $grid-text-grey;
+    }
+    &__box-five{
+        background-color: #8F75BC;
+        grid-column: 4/5;
+        grid-row: 3/7;
+        flex-direction: column;
+        gap: 10px;
+    }
+    &__round-wrap {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background-color: #8066B0;
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        justify-content: center;
+    }
+    &__link-popular {
+        margin-bottom: 15px;
+        padding: 5px 15px;
+        background-color: #8972B6;
+        border-radius: 11px;
+        font-family: 'Lato';
+        font-weight: bold;
+        font-size: 10px;
+        line-height: 12px;
+        color:$white;
+        text-transform: uppercase;
+    }
+    &__link-meet {
+        @include lato-bold;
+        color:$white;
+        text-transform: uppercase;
+    }
+    &__icloud-heading {
+        margin-top: 10px;
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 38px;
+        text-align: center;
+        color: $white;
+    }
+    &__icloud-desc {
+        max-width: 230px;
+        @include lato-info;
+        color: $white;
+        text-align: center;
+    }
+    &__icloud-link {
+        margin-top: 20px;
+        background-color: #FFC80C;
+        border-radius: 27px;
+        padding: 19px 41px;
+        @include lato-bold;
+        text-transform: uppercase;
+        color: $grid-text;
+    }
+    &__box-six{
+        background-color: #93B7B7;
+        grid-column: 1/3;
+        grid-row: 5/7;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__choice-link {
+        margin-top: 15px;
+        margin-left: 15px;
+        margin-bottom: 40px;
+        padding: 3px 5px;
+        background-color: #FA684F;
+        border-radius: 3px;
+        font-family: 'Lato';
+        font-weight: bold;
+        font-size: 8px;
+        line-height: 10px;
+        text-align: center;
+        text-transform: uppercase;
+        color: $white;
+        align-self: start;
+    }
+    &__subtitle-laptop {
+        color: $white;
+        text-align: center;
+        max-width: 200px;
+        margin-bottom: 31px;
+    }
+    &__box-seven{
+        @extend .grid__box-inner;
+        background-color:  #F7F8FA;
+        grid-column: 3/4;
+        grid-row: 5/7;
+    }
+    &__box-eight{
+        grid-column: 1/2;
+        grid-row: 7/8;
+        flex-direction: column;
+        gap: 15px;
+    }
+    &__link-follow {
+        @include lato-description;
+        color: $grid-text;
+    }
+    &__box-nine{
+        background-color: #2C2C2C;
+        grid-column: 2/5;
+        grid-row: 7/8;
+        gap: 80px;
+    }
+    &__subtitle-tv {
+        @include lato-description;
+        color: $white;
+        max-width: 189px;
+    }
+}
+
+.indent {
+    padding: 0 95px;
+}
+.ind {
+    padding-left: 23px;
+}
