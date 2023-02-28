@@ -40,15 +40,18 @@
                     <p class="grid__subtitle">3D Touch. 12MP photos. 4K video. One powerful phone</p>
                     <a class="grid__link" href="#">Learn more or visit an Apple Store today</a>
                 </div>
-                <img class="grid__iphone-img" src="./img/grid_iphone.png" alt="iphone" width="249" height="345">
+                <picture>
+                    <source srcset="./img/grid-iphone-mobile.png" media="(max-width: 425px)">
+                    <img class="grid__iphone-img" src="./img/grid_iphone.png" alt="iphone">
+                </picture>
             </div>
             <div class="grid__box grid__box-two">
-                <a class="grid__link-more" href="#">learn more</a>
+                <a class="grid__link-more grid__link-more--grey" href="#">learn more</a>
                 <h3 class="grid__box-heading">How to Use Rotary Evaporator in Chemical Labs</h3>
                 <a class="grid__link grid__link--download" href="#">Download now</a>
             </div>
             <div class="grid__box grid__box-three">
-                <img src="./img/grid-keyboard.png" alt="keyboard" width="314" height="164">
+                <img class="grid__keyboard-img" src="./img/grid-keyboard.png" alt="keyboard" width="314" height="164">
                 <p class="grid__subtitle grid__subtitle-keyboard">Our Brand New Keyboard</p>
                 <a class="grid__link-more grid__link-more--yellow" href="#">LEARN &#8250;</a>
             </div>
@@ -56,7 +59,6 @@
                 <div class="grid__box--two-column">
                     <p class="grid__box-name indent">imac.retina</p>
                     <p class="grid__subtitle indent">Hardly a month passes these days where</p>
-                    <img class="grid__imac-img" src="./img/grid-imac.png" alt="imac" width="352" height="164">
                 </div>
                 <div class="grid__box--two-column">
                     <p class="grid__desc ind">Apple may be experimenting in the virtual reality space. 
@@ -66,6 +68,11 @@
                     </p>
                     <a class="grid__link-more grid__link-more--blue ind" href="#">Download now &#8250;</a>
                 </div>
+                <picture>
+                    <source srcset="./img/grid-imac-tablet.png" media="(min-width: 426px) and (max-width: 768px)">
+                    <source srcset="./img/grid-imac-mobile.png" media="(max-width: 425px)">
+                    <img class="grid__imac-img" src="./img/grid-imac.png" alt="imac">
+                </picture>
             </div>
             <div class="grid__box grid__box-five">
                 <div class="grid__round-wrap">
@@ -84,7 +91,11 @@
             <div class="grid__box grid__box-six">
                 <a class="grid__choice-link" href="#">best choice</a>
                 <p class="grid__subtitle grid__subtitle-laptop">Much MuchBetter Experience</p>
-                <img class="grid__laptop-img" src="./img/grid-laptop.png" alt="laptop" width="700" height="275">
+                <picture>
+                    <source srcset="./img/grid-laptop-tablet.png" media="(min-width: 426px) and (max-width: 768px)">
+                    <source srcset="./img/grid-laptop-mobile.png" media="(max-width: 425px)">
+                    <img class="grid__laptop-img" src="./img/grid-laptop.png" alt="laptop">
+                </picture>
             </div>
             <div class="grid__box grid__box-seven">
                 <img src="./img/grid-gamepad.png" alt="gamepad" width="303" height="167">
@@ -96,11 +107,15 @@
                 <a class="grid__link-follow" href="#">Follow me &#8250;</a>
             </div>
             <div class="grid__box grid__box-nine">
-                <img src="./img/grid-tv.png" alt="TV" width="271" height="215">
+                <picture>
+                    <source srcset="./img/grid-tv-mobile.png" media="(max-width: 425px)">
+                    <img src="./img/grid-tv.png" alt="TV">
+                </picture>
                 <p class="grid__subtitle-tv">More than just a display, it's a vision</p>
             </div>
         </section>
     </main>
     @@include('blocks/footer.html')
+    <script src="./js/burger.js"></script>
 </body> 
 </html>
