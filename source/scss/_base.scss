@@ -22,27 +22,34 @@ a {
   transition: 0.4s;
 }
 
-h1, h2 {
+h1 {
   font-family: $montserrat;
   font-style: normal;
   font-weight: bold;
   text-transform: uppercase;
   font-size: 40px;
-  line-height: 44px;
-}
-h1 {
-  @media (max-width: $media-mobile-landscape) {
+  line-height: 48px;
+  @media (max-width: $media-tablet) {
     font-size: 36px;
+    line-height: 44px;
+  }
+  @media (max-width: $media-mobile-landscape) {
+    font-size: 24px;
+    line-height: 30px;
   }
 }
 
 h2 {
+  font-family: $montserrat;
+  font-style: normal;
+  font-weight: bold;
+  text-transform: uppercase;
   font-size: 38px;
   line-height: 46px;
   color: $primary-text;
   @media (max-width: $media-tablet) {
     font-size: 36px;
-    line-height: 36px;
+    line-height: 44px;
   }
   @media (max-width: $media-mobile-landscape) {
     font-size: 24px;

@@ -2,9 +2,13 @@
     &__title {
         margin-top: 0;
         margin-bottom: 15px;
-        line-height: 49px;
-        text-transform: uppercase;
         word-spacing: 11px;
+        @media (max-width: $media-tablet) {
+            margin-top: 35px;
+        }
+        @media (max-width: $media-mobile-landscape) {
+            margin-top: 20px;
+          }
     }
     &__wrapper {
         margin-top: 50px;

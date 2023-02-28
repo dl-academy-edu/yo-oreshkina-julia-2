@@ -2,15 +2,12 @@
     &__title {
         margin-top: 0;
         margin-bottom: 15px;
-        line-height: 48px;
         @media (max-width: $media-tablet) {
-            margin-top: 70px;
-            line-height: 44px;
+            margin-top: 35px;
             margin-bottom: 10px;
         }
         @media (max-width: $media-mobile-landscape) {
-            margin-top: 45px;
-            line-height: 30px;
+            margin-top: 20px;
             margin-bottom: 10px;
         }
     }
