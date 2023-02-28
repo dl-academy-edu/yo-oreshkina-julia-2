@@ -59,6 +59,7 @@
 .products {
   margin-top: 90px;
   margin-bottom: 91px;
+  overflow: hidden;
   @media (max-width: $media-tablet-landscape) {
     margin-top: 60px;
     margin-bottom: 60px;
@@ -71,8 +72,7 @@
     margin-top: 30px;
     display: flex;
     width: 1180px;
-    gap: 20px;  
-    overflow: hidden; // остается проблема с полосой прокрутки - это бесполезно
+    gap: 20px;
       @media (max-width: $media-mobile-landscape) {
         margin-top: 20px;
     }

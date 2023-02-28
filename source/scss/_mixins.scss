@@ -77,3 +77,39 @@
   font-size: 22px;
   line-height: 26px;
 }
+
+/* --- Scalable elements of animation --- */
+
+@mixin car-scale-media-tablet {
+  transform: scale(0.6);
+  animation-iteration-count: infinite;
+}
+
+@mixin car-scale-media-mobile {
+  transform: scale(0.27);
+  animation-iteration-count: infinite;
+}
+
+@mixin taxi-scale-media-tablet {
+  animation: taxi-move-media-tablet 10s linear 5s;
+  animation-iteration-count: infinite;
+  transform: scale(0.55) translateX(200%);
+}
+
+@mixin taxi-scale-media-mobile {
+  animation: taxi-move-media-mobile 10s linear 5s;
+  animation-iteration-count: infinite;
+  transform: scale(0.27) translateX(200%);
+}
+
+@mixin arm-scale-media-tablet {
+  transform: scale(0.55) translate(13px, -25px) rotate(150deg);
+  animation: man-arm-up-media-tablet 10s ease 5s forwards;
+  animation-iteration-count: infinite;
+}
+
+@mixin arm-scale-media-mobile {
+  transform: scale(0.27) translate(13px, -25px) rotate(150deg);
+  animation: man-arm-up-media-mobile 10s ease 5s forwards;
+  animation-iteration-count: infinite;
+}
