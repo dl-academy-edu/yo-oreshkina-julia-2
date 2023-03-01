@@ -3,6 +3,9 @@
     @media (max-width: 562px) {
         margin: 7.5px 0;
       }
+    @media (max-width: $media-mobile) {
+        margin: 0;
+      }
 }
   
 .footer__link {

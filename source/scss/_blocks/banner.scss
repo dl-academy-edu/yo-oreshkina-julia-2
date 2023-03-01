@@ -37,11 +37,14 @@
       opacity: 0.05;
       @media (max-width: $media-tablet) {
         font-size: 48px;
-        line-height: 60px;
+        line-height: 58px;
       }
     }
     &__switch {
       line-height: 14px;
+      @media (max-width: $media-tablet) {
+        line-height: 12px;
+      }
       @media (max-width: 495px) {
         text-align: end;
       }
@@ -55,6 +58,7 @@
       transition: 0.4s;
       @media (max-width: $media-tablet) {
         width: 27px;
+        margin-left: 0;
       }
     }
     &__switch-btn:hover {
@@ -67,11 +71,11 @@
     &__slide {
       padding-left: 44px;
       padding-top: 92px;
-      padding-bottom: 89px;
+      padding-bottom: 91px;
       @media (max-width: $media-tablet) {
         padding-left: 11px;
         padding-top: 80px;
-        padding-bottom: 102px;
+        padding-bottom: 103px;
       }
       @media (max-width: 635px) {
         padding: 80px 0 188px 20px;
@@ -82,9 +86,11 @@
     &__title {
       margin: 0;
       max-width: 307px;
+      font-size: 40px;
       line-height: 44px;
       @media (max-width: $media-mobile-landscape) {
         max-width: 276px;
+        font-size: 36px;
         line-height: 40px;
       } 
     }
@@ -97,7 +103,7 @@
       @media (max-width: $media-mobile-landscape) {
         font-size: 18px;
         line-height: 24px;
-        margin: 7px 0 15px 0;
+        margin: 15px 0 15px 0;
       }     
     }
     &__img {
