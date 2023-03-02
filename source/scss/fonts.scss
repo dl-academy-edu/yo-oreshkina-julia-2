@@ -4,6 +4,7 @@
         url('../fonts/Montserrat-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 
@@ -13,6 +14,7 @@
         url('../fonts/Montserrat-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -21,14 +23,16 @@
          url('../fonts/crimsontext-italic-webfont.woff') format('woff');
     font-weight: normal;
     font-style: italic;
-
+    font-display: swap;
 }
+
 @font-face {
 	font-family: 'Open Sans';
 	src: url('../fonts/OpenSans-Regular.woff2') format('woff2'), 
         url('../fonts/OpenSans-Regular.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -37,6 +41,7 @@
         url('../fonts/OpenSans-Bold.woff') format('woff');
 	font-weight: bold;
 	font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -45,6 +50,7 @@
         url('../fonts/roboto-regular-webfont.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -53,6 +59,7 @@
         url('../fonts/lato-regular-webfont.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
+    font-display: swap;
 }
 @font-face {
 	font-family: 'Lato';
@@ -60,4 +67,5 @@
         url('../fonts/lato-bold-webfont.woff') format('woff');
 	font-weight: bold;
 	font-style: normal;
+    font-display: swap;
 }
