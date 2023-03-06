@@ -5,6 +5,7 @@
         }
         @media (max-width: $media-mobile-landscape) {
             margin-top: 20px;
+            margin-bottom: 10px;
         }
     }
     &__inner {
@@ -17,13 +18,13 @@
         @media (max-width: $media-tablet) {
             max-width: 768px;
             margin-top: 30px;
-            grid-template-rows: 278px 430px 430px 430px 350px 350px 215px;
+            grid-template-rows: 278px repeat(3, 430px) repeat(2, 350px) 215px;
         }
         @media (max-width: $media-mobile-landscape) {
             grid-template-columns: 1fr;
             max-width: 425px;
             margin-top: 20px;
-            grid-template-rows: 278px 530px 322px 309px 512px 300px 200px 596px 320px;
+            grid-template-rows:278px minmax(200px, 1fr);
         }
     }
     &__box {
@@ -44,7 +45,9 @@
             flex-direction: column;
             justify-content: flex-end;
             gap: 40px;
-            padding: 0 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 30px;
         }
     }
     &__box-inner {
@@ -126,6 +129,7 @@
         @media (max-width: $media-mobile-landscape) {
             grid-column: 1/2;
             grid-row: 3/4;
+            padding: 30px 0;
         }
     }
     &__subtitle-keyboard {
@@ -170,7 +174,7 @@
         margin-top: 22px;
         @media (max-width: $media-mobile-landscape) {
             margin-top: 30px;
-            margin-bottom: 10px;
+            margin-bottom: 40px;
             order: 2;
         }
     }
@@ -199,6 +203,7 @@
         @media (max-width: $media-mobile-landscape) {
             grid-column: 1/2;
             grid-row: 8/9;
+            padding: 30px 0;
         }
     }
     &__round-wrap {
@@ -310,6 +315,7 @@
         @media (max-width: $media-mobile-landscape) {
             grid-column: 1/2;
             grid-row: 4/5;
+            padding: 40px 0;
         }
     }
     &__box-eight{
@@ -324,6 +330,7 @@
         @media (max-width: $media-mobile-landscape) {
             grid-column: 1/2;
             grid-row: 7/8;
+            padding: 50px 0;
         }
     }
     &__link-follow {
@@ -369,7 +376,7 @@
     }
     @media (max-width: $media-mobile-landscape) {
         padding-left: 20px;
-        padding-right: 185px;
+        padding-right: 187px;
     }
 }
 .ind {
