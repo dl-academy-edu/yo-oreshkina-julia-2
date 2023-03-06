@@ -1,5 +1,7 @@
 .menu__item {
   padding-left: 20px;
+  &__link {
+    text-transform: uppercase; }
   &__link:hover {
     opacity: 0.4;
   }
