@@ -354,6 +354,9 @@
   @media (max-width: $media-tablet) {
     height: 272px;
   }
+  @media (max-width: 635px) {
+    height: 215px;
+  }
   &__info {
     margin: 20px 30px;
     @media (max-width: $media-tablet) {

@@ -24,6 +24,7 @@
         }
         @media (max-width: $media-tablet) {
             margin-top: 30px;
+            column-gap: 18px;
         }
         @media (max-width: 445px) {
             column-gap: 2px;
