@@ -1,5 +1,6 @@
 //Уточнить наименование классов внутри филдсетов
 .filter {
+    overflow: hidden;
     margin-top: 50px;
     padding-top: 42px;
     padding-bottom: 25px;
@@ -107,6 +108,9 @@
             width: 184px;
         }
     }
+    &__range-field:focus {
+        outline: 2px solid $secondary;
+    }
     &__range-field::-webkit-slider-runnable-track  {
         -webkit-appearance: none;
         box-shadow: none;
@@ -197,7 +201,10 @@
     &__input:active + &__label,
     &__input:hover + &__label {
         text-decoration-line: underline;
-    }  
+    }
+    &__input:focus + &__label::after {
+        outline: 2px solid $secondary;
+    }
 }
 .amount {
     display: flex;
@@ -229,12 +236,16 @@
     } 
     &__input {
         position: absolute;
-        display: none;
+        top:  0;
+        left: -9999px;
         width: 35px;
         height: 35px;
     }
     &__input:checked + &__label {
         background: #F3D0DB;
-    } 
+    }
+    &__input:focus + &__label {
+        outline: 2px solid $secondary;
+    }
 }  
 

@@ -31,7 +31,7 @@
     &__button {
         flex: 0 1 auto;
         height: 5%;
-        width: 40%;
+        width: 30%;
         background-color: $white;
         animation: pulsed-btn linear 2s forwards;
         animation-iteration-count: infinite;
@@ -49,12 +49,23 @@
     &__button--right {
         @media (max-width: $media-desktop) {
             order: 3;
-          }
+        }
+        @media (max-width: $media-mobile-landscape) {
+            padding-bottom: 25px;
+        }
     }
-    &__arrow--path {
+    &__button--right > &__arrow {
+        display: flex;
+        justify-content: start;
+        @media (max-width: $media-desktop) {
+            margin: 0 auto;
+
+        }
+    }
+    &__arrow-path {
         transition: 0.4s;
     }
-    &__arrow--path:hover {
+    &__arrow-path:hover {
         cursor: pointer;
         fill: $secondary;
         stroke: $secondary;
