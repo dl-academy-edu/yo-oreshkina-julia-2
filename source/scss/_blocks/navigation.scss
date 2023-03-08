@@ -1,0 +1,46 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    height: 30px;
+    margin-bottom: 56px;
+    &__link--vector {
+      @media (max-width: $media-mobile-landscape) {
+        transform: scale(0.95);
+    }
+    }
+    &__link--vector > path {
+      transition: 0.4s;
+    }
+    &__link--vector > path:hover {
+      stroke: $secondary;
+      stroke-opacity: 1;
+    }
+    &__link--vector > path:active {
+      stroke: $secondary;
+      stroke-opacity: 0.7;
+    }
+    &__pages {
+      display: flex;
+      flex-direction: row;
+      gap: 65px;
+      @media (max-width: $media-tablet) {
+        gap: 52px;
+    }
+    }
+    &__page {
+      font-family: $montserrat;
+      font-weight: bold;
+      font-size: 16px;
+      text-transform: uppercase;
+      @media (max-width: $media-tablet) {
+        @include mobile-font-style;
+    }
+    }
+    &__page:hover {
+      color: #AAAAAA;
+    }
+    &__page--active {
+      color: $secondary;
+    }
+  }

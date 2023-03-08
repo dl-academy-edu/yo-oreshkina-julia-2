@@ -1,0 +1,32 @@
+.breadcrumbs {
+    display: flex;
+    flex-direction: row;
+    gap: 48px;
+    &__item {
+      position: relative;
+    }
+    &__item:last-child {
+      opacity: 0.5;
+    }
+    &__item:not(:last-child)::after{
+      content: ' ';
+      position: absolute;
+      top: 25%;
+      left: 144%;
+      width: 8px;
+      height: 12px;
+      background-image:url('../img/icons/vector-breadcrumbs.svg');
+      background-size:contain;
+      background-repeat: no-repeat;
+    }
+    &__link {
+      font-family: $crimson-text;
+      font-style: italic;
+      font-size: 20px;
+      line-height: 26px;
+      @media (max-width: $media-mobile) {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+  }

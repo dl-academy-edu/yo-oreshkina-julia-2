@@ -1,0 +1,30 @@
+.link {
+  @include elem-flex-center;
+  padding: 0 22px;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 22px;
+  letter-spacing: 1px;
+  color: $white;
+  min-height: 40px;
+  width: max-content;
+  background: $black;
+  @media (max-width: $media-mobile-landscape) {
+    padding: 0 20px;
+    height: 36px;
+    @include mobile-font-style;
+  }
+}
+
+.link:hover {
+  background: $secondary;
+}
+
+.link:active {
+  background: $elem-active;
+}
+
+.link:disabled {
+  background: $elem-disabled;
+}
+

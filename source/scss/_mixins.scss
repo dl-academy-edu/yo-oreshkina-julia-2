@@ -20,3 +20,96 @@
     display: table;
   }
 }
+
+@mixin elem-flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin card-size-main-tablet {
+  width: 259px;
+  height: 249px;
+}
+
+@mixin card-size-main-mobile {
+  width: 247px;
+  height: 238px;
+}
+
+@mixin card-size-catalog-tablet {
+  width: 203px;
+  height: 196px;
+}
+
+@mixin card-size-catalog-mobile {
+  width: 160px;
+  height: 154px;
+}
+
+/* --- FONTS --- */
+
+@mixin mobile-font-style {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@mixin lato-bold {
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+@mixin lato-info {
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+@mixin lato-description {
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+}
+
+/* --- Scalable elements of animation --- */
+
+@mixin car-scale-media-tablet {
+  transform: scale(0.6);
+  animation-iteration-count: infinite;
+}
+
+@mixin car-scale-media-mobile {
+  transform: scale(0.27);
+  animation-iteration-count: infinite;
+}
+
+@mixin taxi-scale-media-tablet {
+  animation: taxi-move-media-tablet 10s linear 5s;
+  animation-iteration-count: infinite;
+  transform: scale(0.55) translateX(200%);
+}
+
+@mixin taxi-scale-media-mobile {
+  animation: taxi-move-media-mobile 10s linear 5s;
+  animation-iteration-count: infinite;
+  transform: scale(0.27) translateX(200%);
+}
+
+@mixin arm-scale-media-tablet {
+  transform: scale(0.55) translate(13px, -25px) rotate(150deg);
+  animation: man-arm-up-media-tablet 10s ease 5s forwards;
+  animation-iteration-count: infinite;
+}
+
+@mixin arm-scale-media-mobile {
+  transform: scale(0.27) translate(13px, -25px) rotate(150deg);
+  animation: man-arm-up-media-mobile 10s ease 5s forwards;
+  animation-iteration-count: infinite;
+}

@@ -1,0 +1,53 @@
+.checkbox {
+    &__label {
+        position: inherit;
+        display: flex;
+        align-items:center;
+        margin-left: 34px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        line-height: 16px;
+        @media (max-width: $media-mobile) {
+            align-items: start;
+            margin-left: 30px;
+        }
+    }
+    &__input {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+    }
+    &__label::after {
+        content: ' ';
+        position: absolute;
+        margin-left: -34px;
+        width: 17px;
+        height: 17px;
+        background-color:inherit; 
+        border-radius: 3px;
+        border: 2px solid $secondary;
+        transition: 0.4s;
+        @media (max-width: $media-mobile) {
+            width: 15px;
+            height: 15px;
+            margin-left: -30px;
+        }  
+    }
+    &__input:disabled + &__label::after {
+        border: 2px solid #E1CDBA;
+    }
+    &__input:checked + &__label::after {
+        background-color: $white;
+        background-image: url('../img/icons/vector-check.svg');
+        background-size:cover;
+    }
+    &__input:focus + &__label::after {
+        outline: 2px solid $secondary;
+    }
+}
+  
+
+
+

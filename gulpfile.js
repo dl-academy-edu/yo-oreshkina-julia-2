@@ -88,7 +88,8 @@ gulp.task('clean', function () {
 gulp.task('copy', function() {
   return gulp.src([
       paths.src + '/img/**/*',
-      paths.src + '/fonts/**/*'
+      paths.src + '/fonts/**/*',
+      paths.src + '/media/**/*'
     ], {
       base: paths.src
     })
@@ -133,7 +134,7 @@ gulp.task('server', function () {
     notify: false,
     open: true,
     ui: false
-  })
+  });
 
   gulp.watch(paths.styles + '/**/**/**/*.scss', gulp.series('styles'));
   gulp.watch(paths.views + '/**/**/*.html', gulp.series('render-view'));

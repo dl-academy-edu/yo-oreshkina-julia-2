@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="google" content="notranslate">
+    <meta name="format-detection" content="telephone=no">
+
+    <title>Contact us</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="Use the form to contact us with your needs. Our support group always ready to help you.">
+
+    <script>
+      var docElement = document.documentElement;
+      docElement.className = docElement.className.replace(/\bno-js\b/, '') + ' js';
+    </script>
+    <link href="css/style.min.css" rel="stylesheet">
+  </head>
+<body>
+    @@include('blocks/header.html')
+    <main class="container">
+        <h1 class="contact__title">CONTACT US</h1>
+        <ul class="breadcrumbs">
+            @@include('blocks/breadcrumbs.html', 
+            {"breadcrumbsPath": "/",
+            "breadcrumbsText": "Home"})
+            @@include('blocks/breadcrumbs.html', 
+            {"breadcrumbsPath": "#",
+            "breadcrumbsText": "Contact Us"})
+        </ul>
+        <div class="contact__wrapper">
+            @@include('blocks/form.html', 
+            {"addClass": "contact__form--width",
+              "checkboxId": "agree",
+            "checkboxFor": "agree",
+            "atr": "checked"})
+            <section class="contact__info">
+                <h2 class="visually-hidden">Information about a support group</h2>
+                <p>Our support team are on-hand to assist with any issues you are experiencing.</p>
+                <p>Please use the form to contact us with your needs. Send us a message and we'll respond as soon as possible.</p>
+                <span>An expert is waiting to help you!</span>
+            </section>
+        </div>
+    </main>
+    @@include('blocks/footer.html')
+    <script src="./js/burger.js"></script>
+</body>
+</html>

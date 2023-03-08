@@ -1,0 +1,26 @@
+.menu__item {
+  padding-left: 20px;
+  &__link {
+    text-transform: uppercase; }
+  &__link:hover {
+    opacity: 0.4;
+  }
+  &__link:active {
+    opacity: 0.2;
+  }
+  &:last-child {
+    @media (max-width: $media-tablet) {
+      margin-top: 15px;
+    }
+  }
+  &:last-child > a{
+    @media (max-width: $media-tablet) {
+      font-weight: bold;
+    }
+  }
+  &__link {
+    @media (max-width: $media-tablet) {
+      font-size: 16px;
+    }
+  }
+} 

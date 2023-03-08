@@ -1,0 +1,93 @@
+.form {
+    @extend .column__two-input;
+    box-sizing: border-box;
+    flex-direction: column;
+    padding: 42px 40px;
+    width: 680px;
+    background: #E5EAF8;
+    z-index: 5;
+    @media (max-width: $media-tablet) {
+      max-width: 648px;
+      padding: 42px 56px;
+      margin-left: 0;
+    }
+    @media (max-width: 540px) {
+      max-width: 500px;
+    }
+    @media (max-width: $media-mobile-landscape) {
+      max-width: 425px;
+      padding: 25px;
+    }
+    @media (max-width: $media-mobile) {
+      max-width: 335px;
+    }
+    &__label {
+      font-family: 'Roboto', sans-serif;
+      font-size: 14px;
+      line-height: 18px;
+    }
+    &__input::placeholder {
+      content: 'Ivan Ivanov';
+      font-family: 'Roboto', sans-serif;
+      font-size: 18px;
+      line-height: 25px;
+      color: $primary-text;
+      @media (max-width: $media-tablet) {
+        font-size: 16px;
+      }
+      @media (max-width: $media-mobile) {
+        font-size: 14px;
+      }
+      }
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    &__inner > input {
+      box-sizing:border-box;
+      padding-left: 20px;
+      border: 1px solid $elem-disabled;
+      height: 50px;
+      transition: 0.4s;
+      @media (max-width: $media-mobile-landscape) {
+        height: 40px;
+      }
+    }
+    &__inner > textarea {
+      box-sizing:border-box;
+      padding-left: 20px;
+      resize: none;
+      border: 1px solid $elem-disabled;
+      transition: 0.4s;
+    }
+    &__inner > input:focus,
+    &__inner > input:hover,
+    &__inner > input:active {
+      outline: 1px solid $secondary;
+    }
+    &__inner > textarea:focus,
+    &__inner > textarea:hover,
+    &__inner > textarea:active {
+      outline: 1px solid $secondary;
+    }
+    &__inner > input:disabled,
+    &__inner > textarea:disabled {
+      outline: 1px solid #EBEBEB;
+    }
+  }
+.column__two-input {
+  display: flex;
+  gap: 20px;
+  @media (max-width: 540px) {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .two-input {
+      width: 48%;
+      margin: auto;
+      @media (max-width: 540px) {
+        width: 100%;
+      }
+    }
+  }

@@ -1,10 +1,242 @@
-/*
-  Код ниже нужно удалить, он добавлен просто для примера
-*/
 .footer {
-  background-color: #151515;
-  color: #fff;
-  padding: 40px 0;
-  text-align: center;
-  height: 100px;
+  background: $footer-bg;
+  &__free-columns {
+    padding-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom:1px solid #666666;
+    @media (max-width: $media-tablet-landscape) {
+      padding-top: 80px;
+    }
+    @media (max-width: 562px) {
+      padding-top: 70px;
+      gap: 40px;
+    }
+  }
+  &__column {
+    width: calc(1/3*100% - (1 - 1/3)*20px);
+    padding-bottom: 13px;
+    @media (max-width: $media-tablet) {
+      padding-bottom: 24px;
+    }
+    @media (max-width: 562px) {
+      width: 100%;
+      margin: 0 20px;
+      padding-bottom: 0;
+    }
+    @media (max-width: $media-mobile) {
+      width: 100%;
+      margin: 0;
+      padding-bottom: 0;
+    }
+  }
+  &__column:nth-of-type(3) {
+    @media (max-width: $media-mobile-landscape) {
+      margin-top: 20px;
+    }
+  }
+  &__subtitle {
+    height: 44px;
+    color:#AAAAAA;
+    border-bottom: 1px solid #666666;
+    margin-bottom: 30px;
+    @media (max-width: 562px) {
+      margin-bottom: 15px;
+    }
+    @media (max-width: $media-mobile) {
+      margin-bottom: 18px;
+    }
+  }
+  &__subtitle--dist {
+    margin-bottom: 25px;
+  }
+  &__list {
+    @media (max-width: 562px) {    
+        display: flex;
+        flex-direction: row;
+    }
+  }
+  &__list-inner {
+    @media (max-width: 562px) {    
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+  }
+  }
+  &__list-inner:nth-of-type(2) {
+    @media (max-width: $media-mobile) {    
+      padding-left: 20px;;
+  }
+  }
+  &__form {
+    margin-top: 25px;
+    display: flex;
+    height: auto;
+  }
+  &__input {
+    border-style: none;
+    padding-left: 15px;
+    width: 100%;
+    background-color:#666666;
+    transition: 0.4s;
+  }
+  &__input::placeholder {
+    content:"Email";
+    color:#EBEBEB;
+  }
+  &__input:hover, &__input:active, &__input:focus {
+    border: 1px solid #FFFDFD;
+    outline: none;
+  }
+  &__connect-list {
+    margin-top: 28px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    @media (max-width: 562px) {    
+      margin-bottom: 60px;
+    }
+    @media (max-width: $media-mobile) {    
+      margin-top: 23px;
+      gap: 13px;
+  }
+  }
+  &__connect-link {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: #666666;
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size: 50% 50%;
+  }
+  &__connect-link:hover {
+    opacity: 0.5;
+  }
+  &__connect-link:active {
+    opacity: 0.2;
+  }
+  &__inner {
+    padding-top: 22px;
+    padding-bottom: 85px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: $media-tablet-landscape) {
+      gap: 15px;
+      padding-bottom: 45px;
+      padding-top: 24px;
+    }
+    @media (max-width: 562px) {
+      gap: 15px;
+    }
+  }
+  &__inner > &__column:first-child {
+    @media (max-width: $media-tablet-landscape) {
+      width: 100%;
+      padding: 0;
+    }
+  }
+  &__inner > &__column:not(:first-child) {
+    @media (max-width: $media-tablet-landscape) {
+      width: calc(1/2*100% - (1 - 1/2)*20px);
+    }
+    @media (max-width: 562px) {    
+      width: 100%;
+  }
+  }
+
+  &__copyright {
+    color: $white;
+    font-size: 16px;
+  }
+  &__designer {
+    font-size: 16px;
+    line-height: 22px;
+    color: #A2A2A2;
+  }
+  &__designer:hover, &__designer:active {
+    text-decoration-line: underline;
+    color: $white; 
+  }
+}
+
+.icon-facebook {
+  background-image: url('../img/icons/facebook.svg'); 
+}
+
+.icon-twitter {
+  background-image: url('../img/icons/twitter.svg'); 
+}
+
+.icon-pinterest {
+  background-image: url('../img/icons/pinterest.svg'); 
+}
+
+.icon-instagram {
+  background-image: url('../img/icons/instagram.svg'); 
+}
+
+.rating {
+  display: flex;
+  overflow: hidden;
+  &__group {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items:center;
+    font-size: 16px;
+    font-family: $open-sans;
+    line-height: 22px;
+    width: 264px;
+    margin-left: -10px;
+    color: $white;
+    transition: 0.4s;
+  }
+  &__group:hover {
+    color: $secondary;
+  }
+  &__input {
+    position: absolute;
+    top:  0;
+    left: -9999px;
+    width: 17px;
+    height: 16px;
+    font-size: inherit;
+  }
+  
+  &__star {
+    width: 17px;
+    height: 16px;
+    margin-right: 3px;
+    margin-top: 3px;
+    background-image: url('../img/icons/star.svg');
+    background-repeat:no-repeat;
+    background-size:contain;
+    transition: 0.4s;
+  }
+  &__star:nth-of-type(5) {
+    margin-left: 30px;
+  }
+  &__input:checked + &__star, 
+  &__input:checked + &__star ~ &__star {
+    background-image: url('../img/icons/star-on.svg');
+    background-repeat:no-repeat;
+    background-size:contain;
+  }
+  &__group > &__input:checked ~ &__star:hover,
+  &__group > &__input:checked ~ &__star:hover ~ &__star,
+  &__star:hover, 
+  &__star:hover ~ &__input ~ &__star {
+    background-image: url('../img/icons/star-hover.svg');
+    background-repeat:no-repeat;
+    background-size:contain;
+  }
+  &__input:focus + &__star {
+    outline: 2px solid $secondary;
+  }
 }

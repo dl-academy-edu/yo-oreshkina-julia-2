@@ -10,7 +10,9 @@ $font-mono-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "
 /*
   Themes fonts
 */
-$font-base-family: $font-serif-family;
+$montserrat: 'Montserrat', sans-serif;
+$crimson-text: 'Crimson Text', serif;
+$open-sans: 'Open Sans', sans-serif;
 
 /*
 * Breakpoints
@@ -19,10 +21,24 @@ $font-base-family: $font-serif-family;
 $media-tablet: 768px;
 $media-tablet-landscape: 1024px;
 $media-desktop: 1200px;
+$media-mobile-landscape: 425px;
+$media-mobile: 375px;
 
 /*
 * Colors
 */
 
-$color-bg: #fff;
-$color-text: #151515;
+$white: #FFFFFF;
+$primary-text: #1E0606;
+$black: #000000;
+$footer-bg: #434343;
+$elem-disabled: #C7C1C1;
+$elem-active: #CFAF91;
+$secondary: #C29974;
+$bg-elem: rgba(112, 187, 220, 0.2);
+$bg-blocks: #E1F0F7;
+$grid-text-grey: #BCBCBE;
+$grid-link-blue: #2198F4;
+$grid-text: #2C3036;
+$grid-link-yellow: #FFC80A;
+

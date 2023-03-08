@@ -16,7 +16,33 @@
   Import all other blocks
 */
 @import "_blocks/container";
+@import "_blocks/checkbox";
+@import "_blocks/audioplayer";
+@import "_blocks/header";
+@import "_blocks/header__menu__item";
+@import "_blocks/filter";
+@import "_blocks/popup";
 @import "_blocks/footer";
+@import "_blocks/footer__item";
+@import "_blocks/form";
+@import "_blocks/button";
+@import "_blocks/link";
+@import "_blocks/banner";
+@import "_blocks/breadcrumbs";
+@import "_blocks/partners";
+@import "_blocks/navigation";
+@import "_blocks/blog__item";
+@import "_blocks/products-card";
+@import "_blocks/toys__card";
+@import "catalog";
+@import "animation";
+@import "toys";
+@import "blog";
+@import "contact";
+@import "svg";
+@import "grid";
+@import "fonts";
+
 
 /*
   Ниже пример подключения других блоков
@@ -29,32 +55,321 @@
   block-name__element-name--modificator
 */
 
-/*
-  Код ниже нужно удалить, он добавлен просто для примера
-  Не стал выносить в отдельный файл, но если бы блок coming-soon действительно был бы нужен,
-  то он должен был бы быть в файле _blocks/coming-soon.scss
-*/
+/*** Category Products ***/
 
-.coming-soon {
-  color: $color-text;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  min-height: calc(100vh - 100px);
-  margin: auto;
-  padding: 0 5vw;
-
-  &__title {
+.products {
+  margin-top: 90px;
+  margin-bottom: 91px;
+  overflow: hidden;
+  @media (max-width: $media-tablet-landscape) {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  @media (max-width: $media-mobile-landscape) {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+  &__list {
+    margin-top: 30px;
     display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-    font-size: 25vw;
-    font-weight: 400;
-    margin: 0 auto;
-    text-transform: uppercase;
+    width: 1180px;
+    gap: 20px;
+    @media (max-width: $media-tablet) {
+      margin-top: 24px;
+    }
+      @media (max-width: $media-mobile-landscape) {
+        margin-top: 20px;
+    }
+  }
+  &__nav {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 33px 0 0;
+    @media (max-width: $media-tablet) {
+      margin-top: 28px;
+    }
+    @media (max-width: $media-mobile-landscape) {
+      margin: 20px 0 0;
+  }
+}
+  &__nav-inner {
+    display: flex;
+    gap: 5px;
+    flex-wrap: nowrap;
+  }
+  &__info {
+    padding-left: 20px;
+    margin: 0;
+    max-width: 580px;
+    line-height: 20px;
+    @media (max-width: $media-tablet) {
+      @include mobile-font-style;
+    }
+  }
+}
+
+.button-paginator {
+  width: 38px;
+  height: 37px;
+  border: none;
+  background-color: $bg-elem;
+  @media (max-width: $media-tablet) {
+    width: 35px;
+    height: 35px;
+  }
+  @media (max-width: $media-mobile-landscape) {
+    width: 33px;
+    height: 33px;
+  }
+}
+.btn-vector {
+  @media (max-width: $media-tablet) {
+    transform: scale(0.9);
+  }
+  @media (max-width: $media-mobile-landscape) {
+    transform: scale(0.8);
+  }
+}
+
+.btn-vector > path {
+  transition: 0.4s;
+}
+
+.btn-vector > path:hover {
+  cursor: pointer;
+  stroke: $secondary;
+}
+
+.btn-vector > path:active {
+  stroke: rgba(194, 153, 116);
+  opacity: 0.7; 
+}
+
+.btn-vector > path:disabled {
+  stroke: rgba(30, 6, 6);
+  opacity: 0.12; 
+}
+
+/*** SERVICES: DELIVERY ***/
+
+.services {
+  width: 100%;
+  display: flex;
+  gap: 10%;
+  @media (max-width: $media-tablet) {
+    gap: 8.5%;
+    }
+  @media (max-width: $media-mobile-landscape) {
+    flex-wrap: wrap;
+    gap: 0;
+  }
+  &__photo {
+    background: $bg-elem;
+  }
+  &__inner {
+    padding-top: 33px;
+    width: 40%;
+    @media (max-width: $media-tablet) {
+      padding-top: 28px;
+      width: 48%;
+      }
+    @media (max-width: $media-mobile-landscape) {
+    padding-top: 20px;
     width: 100%;
+    }
+  }
+  &__title {
+    margin-bottom: 3px;
+    @media (max-width: $media-tablet) {
+      margin-bottom: 6px;
+      }
+      @media (max-width: $media-mobile-landscape) {
+        margin-bottom: 18px;
+      }
+  }
+  &__list {
+    max-width: 267px;
+    @media (max-width: $media-tablet) {
+      max-width: 247px;
+      }
+  }
+  &__item {
+    margin-left: -60px;
+    height: 55px;
+    transition: 0.4s;
+    @media (max-width: $media-tablet) {
+      margin-left: -20px;
+      }
+    @media (max-width: $media-tablet) {
+      height: 45px;
+      }
+  }
+  &__item:hover {
+    background: rgba(112, 187, 220, 0.1);
+    cursor: pointer;
+  }
+  &__item--active {
+    background: $bg-elem;
+  }
+  &__link {
+    font-family: $crimson-text;
+    font-style: italic;
+    font-size: 26px;
+    line-height: 58px;
+    padding-left: 60px;
+    @media (max-width: $media-tablet) {
+      font-size: 24px;
+      line-height: 40px;
+      padding:0 20px;
+      }
+  }
+  &__link--open {
+    font-weight: bold;
+    font-size: 28px;
+    @media (max-width: $media-tablet) {
+      font-size: 26px;
+      }
+  }
+  &__content {
+    margin-top: 20px;
+    @media (max-width: $media-tablet) {
+      margin-top: 16px;
+      }
+  }
+  &__delivery {
+    box-sizing: content-box;
+    line-height: 22px;
+    padding-bottom: 18px;
+    @media (max-width: $media-tablet) {
+      line-height: 18px;
+      font-size: 14px;
+    }
+    @media (max-width: $media-mobile) {
+      padding-bottom: 0;
+    }
+  }
+  &__delivery:nth-of-type(1) {
+    @media (max-width: $media-mobile) {
+      padding-bottom: 12px;
+    }
+  } 
+}
+
+.services__link-more {
+  margin-top: 5px;
+  @media (max-width: $media-tablet) {
+    margin-top: 7px;
+  }
+}
+
+/*** DLK CONTACTS ***/
+
+.two-column {
+  padding-top: 27px;
+  display: flex;
+  gap: 57px;
+  margin-bottom: 155px;
+  @media (max-width: $media-tablet-landscape) {
+    gap: 20px;
+    margin-bottom: 125px;
+  }
+  @media (max-width: 635px) {
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-bottom: 148px;
+  }
+  @media (max-width: $media-mobile) {
+    max-width: 375px;
+    margin-bottom: 155px;
+  }
+  
+}
+
+.title {
+  margin-left: 30px;
+  margin-top: -25px;
+  margin-bottom: 10px;
+  @media (max-width: $media-tablet-landscape) {
+    margin-left: 15px;
+    margin-bottom: 15px;
+  }
+  @media (max-width: $media-tablet) {
+    margin-top: -17px;
+    font-size: 30px;
+    line-height: 36px;
+  }
+  @media (max-width: $media-mobile-landscape) {
+    margin-top: -15px;
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+
+.about {
+  max-width: 543px;
+  background-color: $bg-blocks;
+  &__link {
+    margin-left: 30px;
+    font-family: $crimson-text;
+    font-style: italic;
+    font-size: 26px;
+    line-height: 34px;
+    @media (max-width: $media-mobile-landscape) {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+  &__info {
+    margin: 10px 30px 20px;
+    @media (max-width: $media-tablet) {
+      margin-top: 10px;
+      margin-left: 15px;
+      margin-bottom: 17px;
+      margin-right: 40px;
+    }
+    @media (max-width: $media-mobile-landscape) {
+      margin: 10px 15px;
+      @include mobile-font-style;
+    }
+  }
+  &__buy-link {
+    margin-bottom: 28px;
+    margin-left: 30px;
+    @media (max-width: $media-tablet) {
+      margin-left: 15px;
+    }
+    @media (max-width: $media-mobile-landscape) {
+      margin-left: 15px;
+      margin-top: 15px;
+      margin-bottom: 25px;
+    }
+  }
+}
+
+.contacts {
+  position: relative;
+  max-width: 543px;
+  height: 209px;
+  background-color: $bg-blocks;
+  @media (max-width: $media-tablet) {
+    height: 272px;
+  }
+  @media (max-width: 635px) {
+    height: 215px;
+  }
+  &__info {
+    margin: 20px 30px;
+    @media (max-width: $media-tablet) {
+      margin: 23px 40px 20px 15px;
+    }
+    @media (max-width: $media-mobile-landscape) {
+      margin: 10px 15px;
+      @include mobile-font-style;
+    }
+  }
+  &__map {
+    position: absolute;
+    left: 5%;
+    height: auto;
   }
 }

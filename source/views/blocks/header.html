@@ -1,0 +1,80 @@
+<header class="container header">
+    <a class="header__link" href="/index.html">
+        <img class="header__logo" src="./img/icons/dlk-logo.svg" alt="DLK logo">
+    </a>
+    <nav class="header__menu">
+        <ul class="header__menu__list">
+            @@include('blocks/header__menu__item.html',
+            {"menuLink": "/catalog.html",
+            "menuLinkName": "catalog"})
+            @@include('blocks/header__menu__item.html',
+            {"menuLink": "#",
+            "menuLinkName": "about us"})
+            @@include('blocks/header__menu__item.html',
+            {"menuLink": "/blog.html",
+            "menuLinkName": "blog"})
+            @@include('blocks/header__menu__item.html',
+            {"menuLink": "/animation.html",
+            "menuLinkName": "animation"})
+            @@include('blocks/header__menu__item.html',
+            {"menuLink": "/svg.html",
+            "menuLinkName": "svg"})
+            @@include('blocks/header__menu__item.html',
+            {"menuLink": "/grid.html",
+            "menuLinkName": "grid"})
+            @@include('blocks/header__menu__item.html',
+            {"menuLink": "/bootstrap.html",
+            "menuLinkName": "bootstrap"})
+        </ul>
+    </nav>
+    <button class="header__menu-btn menu-btn menu-btn--open">menu</button>
+    <a class="header__contact-link--media" href="/contact.html">
+        <img class="header__contact-icon" src="./img/icons/search.svg" alt="contact page icon" width= "18" height="18">
+    </a>
+    <a class="header__contact-link icon-search" href="/contact.html">CONTACT US</a>  
+</header>
+<div class="header__burger-wrapper visually-hidden">
+    <div class="header__burger">
+        <div class="header__burger-inner">
+            <a class="header__link" href="/index.html">
+                <img class="header__logo" src="./img/icons/dlk-logo.svg" alt="DLK logo">
+            </a>
+            <button class="header__menu-btn--burger menu-btn menu-btn--close">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.707105 0L0 0.707105L7.07111 7.77821L4.6869e-05 14.8493L0.707151 15.5564L7.77821 8.48532L14.8492 15.5563L15.5563 14.8492L8.48532 7.77821L15.5563 0.707178L14.8492 7.33696e-05L7.77821 7.07111L0.707105 0Z" fill="#1E0606"/>
+                </svg>
+            </button>
+            <a class="header__contact-link--media menu-btn" href="/contact.html">
+                <img class="header__contact-icon" src="./img/icons/search.svg" alt="contact page icon" width= "18" height="18">
+            </a>
+        </div>
+        <nav class="header__burger-menu">
+            <ul class="header__burger-list">
+                @@include('blocks/header__menu__item.html',
+                {"menuLink": "/catalog.html",
+                "menuLinkName": "CATALOG"})
+                @@include('blocks/header__menu__item.html',
+                {"menuLink": "#",
+                "menuLinkName": "ABOUT US"})
+                @@include('blocks/header__menu__item.html',
+                {"menuLink": "/blog.html",
+                "menuLinkName": "BLOG"})
+                @@include('blocks/header__menu__item.html',
+                {"menuLink": "/animation.html",
+                "menuLinkName": "ANIMATION"})
+                @@include('blocks/header__menu__item.html',
+                {"menuLink": "/svg.html",
+                "menuLinkName": "SVG"})
+                @@include('blocks/header__menu__item.html',
+                {"menuLink": "/grid.html",
+                "menuLinkName": "GRID"})
+                @@include('blocks/header__menu__item.html',
+                {"menuLink": "/bootstrap.html",
+                "menuLinkName": "bootstrap"})
+                @@include('blocks/header__menu__item.html',
+                {"menuLink": "/contact.html",
+                "menuLinkName": "CONTACT US"})
+            </ul>
+        </nav>
+    </div>
+</div>

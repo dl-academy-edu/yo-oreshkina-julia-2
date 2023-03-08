@@ -1,5 +1,14 @@
 .container {
-  padding: 0 20px;
+  max-width: 1180px;
   margin: 0 auto;
-  max-width: 1220px;
+
+  @media (max-width: $media-tablet) {
+    max-width: 648px;
+  }
+  @media (max-width: $media-mobile-landscape) {
+    max-width: 375px;
+  }
+  @media (max-width: $media-mobile) {
+    max-width: 335px;
+  }
 }

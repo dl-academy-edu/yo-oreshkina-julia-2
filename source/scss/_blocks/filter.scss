@@ -1,0 +1,251 @@
+//Уточнить наименование классов внутри филдсетов
+.filter {
+    overflow: hidden;
+    margin-top: 50px;
+    padding-top: 42px;
+    padding-bottom: 25px;
+    background: rgba(125, 151, 218, 0.2);
+    @media (max-width: $media-tablet) {
+        margin-top: 30px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    @media (max-width: $media-mobile-landscape) {
+        margin-top: 20px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+    &__form {
+        display: flex;
+        flex-direction: row;
+        column-gap: 60px;
+        @media (max-width: 1100px) {
+            flex-wrap: wrap;
+        }
+        @media (max-width: $media-tablet) {
+            column-gap: 75px;
+            row-gap: 8px;
+        }
+        @media (max-width: $media-mobile-landscape) {
+            column-gap: 95px;
+            row-gap: 25px;
+        }
+    }
+    &__subtitle {
+        font-family: $open-sans;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 15px;
+        @media (max-width: $media-mobile-landscape) {
+            @include mobile-font-style;
+            margin-bottom: 10px;
+        }
+    }
+    &__cost {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        @media (max-width: $media-mobile) {
+            gap: 8px;
+        }
+    }
+    &__color {
+        flex: 0.4 1 auto;
+        margin-left: 34px;
+        @media (max-width: $media-tablet) {
+            flex: 0.1 1 auto;
+            margin-left: 0;
+        }
+    }
+    &__amount {
+        margin-left: 10px;
+        @media (max-width: $media-tablet) {
+            margin-left: 0;
+        }
+    }
+    &__label {
+        font-family: $open-sans;
+        line-height: 22px;
+        font-weight: normal;
+        font-size: 16px;
+        @media (max-width: $media-mobile-landscape) {
+            @include mobile-font-style;
+        }
+    }
+    &__apply-btn {
+        height: 40px;
+        margin-top: 35px;
+        @media (max-width: $media-tablet) {
+            margin-left: 135px;
+        }
+        @media (max-width: $media-mobile) {
+            margin-top: 0;
+        }
+    }
+    &__range-label {
+        margin-top: 5px;
+        word-spacing: 165px;
+        @media (max-width: $media-mobile-landscape) {
+            @include mobile-font-style;
+        }
+    }
+    &__range-field {
+        margin-left: 5px;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        outline: none;
+        width: 188px;
+        height: 4px;
+        border: none;
+        background: rgba(0, 0, 0, 0.5);
+        background-image: linear-gradient($secondary, $secondary);
+        background-size: 20% 100%;
+        background-repeat: no-repeat;
+        @media (max-width: $media-tablet) {
+            margin-left: 0;
+            width: 184px;
+        }
+    }
+    &__range-field:focus {
+        outline: 2px solid $secondary;
+    }
+    &__range-field::-webkit-slider-runnable-track  {
+        -webkit-appearance: none;
+        box-shadow: none;
+        border: none;
+        background: transparent;
+    }
+    &__range-field::-moz-range-thumb {
+        -moz-appearance: none;
+        appearance: none;
+        width:8px;
+        height: 8px;
+        background: $white;
+        border-radius: 50%;
+        border: 8px solid $secondary;
+        cursor: pointer;
+    }
+    &__range-field::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 24px;
+        height: 24px;
+        background: $white;
+        border-radius: 50%;
+        border: 8px solid $secondary;
+        cursor: pointer;
+    }  
+    &__range-field::-moz-range-progress {
+        background: $secondary;
+    }
+    .checkbox {
+        margin-bottom: 15px;
+        @media (max-width: $media-mobile) {
+            margin-bottom: 10px;
+        }
+        &__input:disabled + &__label {
+            color: #908484;
+        }
+        &__input:hover + &__label, 
+        &__input:active + &__label {
+            text-decoration-line: underline;
+        }
+    }
+}
+.delivery {
+    margin-bottom: 10px;
+    &__label {
+        position: inherit;
+        display: flex;
+        align-items:center;
+        margin-left: 30px;
+        @media (max-width: $media-mobile-landscape) {
+            margin-left: 25px;
+        }
+    }
+    &__label::after {
+        content: '';
+        position: absolute;
+        margin-left: -30px;
+        width: 17px;
+        height: 17px;
+        background-color:inherit; 
+        border-radius: 50%;
+        border: 2px solid $secondary; 
+        transition: 0.4s;
+        @media (max-width: $media-mobile-landscape) {
+            width: 13px;
+            height: 13px;
+            margin-left: -25px;
+        }
+    }
+    &__input {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+    }
+    &__input:disabled + &__label::after {
+        border: 2px solid #E1CDBA;
+    }
+    &__input:disabled + &__label {
+        color: #908484;
+    }
+    &__input:checked + &__label::after {
+        background-color: $secondary;
+        box-shadow: inset 0 0 0 3px $white;
+    }
+    &__input:active + &__label,
+    &__input:hover + &__label {
+        text-decoration-line: underline;
+    }
+    &__input:focus + &__label::after {
+        outline: 2px solid $secondary;
+    }
+}
+.amount {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    background-color: $white;
+    & > div {
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        width: 80px;
+        height: 35px;
+    }
+    &__label {
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        width: 80px;
+        height: 35px;
+        transition: 0.4s;
+        @media (max-width: $media-mobile-landscape) {
+            @include mobile-font-style;
+        }
+    }
+    &__label:hover {
+        background: #EDDEEB;
+        color: #877379;
+        cursor:pointer;
+    } 
+    &__input {
+        position: absolute;
+        top:  0;
+        left: -9999px;
+        width: 35px;
+        height: 35px;
+    }
+    &__input:checked + &__label {
+        background: #F3D0DB;
+    }
+    &__input:focus + &__label {
+        outline: 2px solid $secondary;
+    }
+}  
+

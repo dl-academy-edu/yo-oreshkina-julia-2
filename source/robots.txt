@@ -2,4 +2,7 @@
 
 # Disallow all content
 User-agent: *
-Disallow: /
+Disallow: /catalog.html
+Disallow: /contact.html
+Disallow: /blog.html
+Disallow: /toys.html

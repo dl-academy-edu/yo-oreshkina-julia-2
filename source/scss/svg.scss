@@ -1,0 +1,208 @@
+@use "sass:math";
+    $countOfLines: 13;
+    $timeAnimForSun: 10s;
+    $timeAnimForLine: math.div($timeAnimForSun, $countOfLines);
+.svg {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    flex-direction: row;
+    @media (max-width: $media-desktop) {
+        flex-direction: column;
+        align-items:center;
+        margin: 30px auto;
+    }
+    @media (max-width: $media-mobile-landscape) {
+        gap: 5px;
+    }
+    &__title {
+        @media (max-width: $media-tablet) {
+            margin-top: 35px;
+        }
+        @media (max-width: $media-mobile-landscape) {
+            margin-top: 20px;
+        }
+    }
+
+    &__button {
+        flex: 0 1 auto;
+        height: 5%;
+        width: 30%;
+        background-color: $white;
+        animation: pulsed-btn linear 2s forwards;
+        animation-iteration-count: infinite;
+        @for $i from 1 through 2 {
+          &:nth-child(#{$i}) {
+            animation-delay: $i + 2s;
+          }
+        }
+    }
+    &__button--left {
+        @media (max-width: $media-desktop) {
+            order: 1;
+          }
+    }
+    &__button--right {
+        @media (max-width: $media-desktop) {
+            order: 3;
+        }
+        @media (max-width: $media-mobile-landscape) {
+            padding-bottom: 25px;
+        }
+    }
+    &__button--right > &__arrow {
+        display: flex;
+        justify-content: start;
+        @media (max-width: $media-desktop) {
+            margin: 0 auto;
+
+        }
+    }
+    &__arrow-path {
+        transition: 0.4s;
+    }
+    &__arrow-path:hover {
+        cursor: pointer;
+        fill: $secondary;
+        stroke: $secondary;
+    }
+    &__inner-desktop {
+        @include elem-flex-center;
+        width: 48%;
+        @media (max-width: $media-desktop) {
+            order: 2;
+            width: 100%;
+          }
+    }
+    &__desktop {
+        filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.2));
+    }
+    &__desktop-line--left, &__desktop-line--right {
+        stroke-width: 14px;
+        stroke-linecap: round;
+    }
+    &__desktop-line--show {
+        transform: translateX(-55%);
+        animation: move-line-left linear $timeAnimForLine forwards;
+        @for $i from 2 through 14 {
+        $indexNumberOfLine: #{$i - 2};
+          &:nth-of-type(#{$i}) {
+            animation-delay:calc($indexNumberOfLine * $timeAnimForLine);
+          }
+        } 
+    }
+    
+    &__desktop-sun--show {
+        animation: move-sun $timeAnimForSun linear forwards;
+    }
+    &__pyramid--shadow {
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+    &__inner-dreams {
+        position: relative;
+        @include elem-flex-center;
+        @media (max-width: $media-desktop) {
+            order: 4;
+          }
+    }
+    &__dreams {
+        height: auto;
+    }
+    &__star-one {
+        position: absolute;
+        right: 24%;
+        top: 5%;
+        transform: scale(0);
+    }
+    &__star-one--show {
+        animation: starfall 5s linear forwards 2s;
+        animation-iteration-count: infinite;
+    }
+    &__star-two {
+        position: absolute;
+        right: 5%;
+        top: 3%;
+        transform: scale(0);
+    }
+    &__star-two--show {
+        animation: starfall 5s linear forwards;
+        animation-iteration-count: infinite;
+    }
+    &__star-three {
+        position: absolute;
+        right: 10%;
+        top: 15%;
+        transform: scale(0);
+    }
+    &__star-three--show {
+        animation: starfall 5s linear forwards 3s;
+        animation-iteration-count: infinite;
+    }
+}
+
+@keyframes starfall {
+    0% {
+        transform: scale(0) translate(0, 0);
+        opacity: 1;
+    }
+    25% {
+        opacity: 1;
+        transform: scale(0.2) translate(-75px, 39px);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(0.5) translate(-150px, 80px);
+    }
+    75% {
+        opacity: 0.5;
+        transform: scale(0.8) translate(-220px, 129px);
+    }
+    
+    100% {
+        opacity: 0;
+        transform: scale(1) translate(-250px, 150px);
+    }
+}
+
+@keyframes pulsed-btn {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+} 
+
+@keyframes move-line-left {
+    0% {
+        transform: translateX(-55%);      
+      }
+    100% {
+        transform: translateX(0%);      
+      }
+} 
+ 
+@keyframes move-sun {
+    0% {
+        transform: translate(0,0);      
+      }
+    20% {
+        transform: translate(6.25%,-2.4%);      
+      }
+    50% {
+        transform: translate(12.5%,-4%);      
+      }
+    80% {
+        transform: translate(18.75%,-2.4%);
+    }
+    100% {
+        transform: translate(25%, 0);      
+      }
+} 
