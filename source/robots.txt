@@ -1,6 +1,4 @@
 # www.robotstxt.org
-
-# Disallow all content
 User-agent: *
 Disallow: /catalog.html
 Disallow: /contact.html
