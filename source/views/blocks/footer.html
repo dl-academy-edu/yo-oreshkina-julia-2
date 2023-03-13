@@ -4,8 +4,8 @@
           <section class="footer__column">
               <h2 class="visually-hidden">Navigation</h2>
               <p class="footer__subtitle">Navigation</p>
-              <ul class="footer__list">
-                <div class="footer__list-inner">
+              <nav class="footer__list">
+                <ul class="footer__list-inner">
                     @@include('blocks/footer__item.html',
                     {"footerLinkPath": "#",
                     "footerLinkname": "About Us"})
@@ -15,8 +15,8 @@
                     @@include('blocks/footer__item.html',
                     {"footerLinkPath": "#",
                     "footerLinkname": "Design Services"})
-                </div>
-                <div class="footer__list-inner">
+                </ul>
+                <ul class="footer__list-inner">
                     @@include('blocks/footer__item.html',
                     {"footerLinkPath": "#",
                     "footerLinkname": "Featured On"})
@@ -26,14 +26,14 @@
                     @@include('blocks/footer__item.html',
                     {"footerLinkPath": "#",
                     "footerLinkname": "Shop By Designer"})
-                </div>
-              </ul>
+                </ul>
+            </nav>
           </section>
           <section class="footer__column">
               <h2 class="visually-hidden">Customer Information</h2>
               <p class="footer__subtitle">Customer Information</p>
-              <ul class="footer__list">
-                <div class="footer__list-inner">
+              <nav class="footer__list">
+                <ul class="footer__list-inner">
                     @@include('blocks/footer__item.html',
                     {"footerLinkPath": "./contact.html",
                     "footerLinkname": "Contact Us"})
@@ -43,8 +43,8 @@
                     @@include('blocks/footer__item.html',
                     {"footerLinkPath": "#",
                     "footerLinkname": "Shipping & Returns"})
-                </div>
-                <div class="footer__list-inner">
+                </ul>
+                <ul class="footer__list-inner">
                     @@include('blocks/footer__item.html',
                     {"footerLinkPath": "#",
                     "footerLinkname": "Terms & Conditions"})
@@ -54,8 +54,8 @@
                     @@include('blocks/footer__item.html',
                     {"footerLinkPath": "#",
                     "footerLinkname": "Search"})
-                </div>
-              </ul>
+                </ul>
+              </nav>
           </section>
           <section class="footer__column">
               <h2 class="visually-hidden">Connect</h2>
@@ -66,7 +66,7 @@
                     {"additionalclass": "connect__btn",
                     "buttonType": "submit",
                     "buttonName": "Join",
-                    "buttonTab": "false"})
+                    "buttonTab": "0"})
               </form>
               <ul class="footer__connect-list">
                   <li class="footer__connect-item"><a class="footer__connect-link icon-facebook" href="https://facebook.com/" aria-label="share on facebook"></a></li>

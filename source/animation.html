@@ -23,7 +23,7 @@
   <body>
     @@include('blocks/header.html')
     <main class="animation">
-        <h2 class="animation__title container">Animation scene</h2>
+        <h1 class="animation__title container">Animation scene</h1>
         <ul class="breadcrumbs container">
             @@include('blocks/breadcrumbs.html', 
             {"breadcrumbsPath": "/",
@@ -33,6 +33,7 @@
             "breadcrumbsText": "Animation"})
         </ul>
         <section class="animation__inner">
+            <h2 class="visually-hidden">Animation</h2>
             <div class="animation__clouds animation__cloud-one"><img class="animation__cloud-img" src="./img/animation/cloud1.png" alt="cloud" width="91" height="26"></div>
                 <div class="animation__clouds animation__cloud-two"><img class="animation__cloud-img" src="./img/animation/cloud2.png" alt="cloud" width="158" height="32"></div>
                 <div class="animation__clouds animation__cloud-three"><img class="animation__cloud-img" src="./img/animation/cloud3.png" alt="cloud" width="188" height="37"></div>
