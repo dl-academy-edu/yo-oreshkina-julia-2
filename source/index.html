@@ -25,7 +25,7 @@
             @@include('blocks/products-card.html',
             {"cardColor": "card_1",
             "cardSize": "card__main-size",
-            "cardImg": "./img/apparel-kids.png",
+            "cardImg": "./img/apparel-kids.jpg",
             "cardAlt": "apparel kids",
             "cardLink": "#",
             "cardName": "apparel kids"})
@@ -33,7 +33,6 @@
             {"cardColor": "card_2",
             "cardSize": "card__main-size",
             "cardImg": "./img/sock.png",
-            "imgSize": "img_2--media",
             "cardAlt": "holiday shop",
             "cardLink": "#",
             "cardName": "holiday shop"})
@@ -41,7 +40,6 @@
             {"cardColor": "card_3",
             "cardSize": "card__main-size",
             "cardImg": "./img/toy.png",
-            "imgSize": "img_3--media",
             "cardAlt": "toys",
             "cardLink": "./toys.html",
             "cardName": "toys"})
@@ -49,7 +47,6 @@
             {"cardColor": "card_4",
             "cardSize": "card__main-size",
             "cardImg": "./img/drowing.png",
-            "imgSize": "img_4--media",
             "cardAlt": "accessories",
             "cardLink": "#",
             "cardName": "accessories"})
@@ -152,14 +149,13 @@
             <p class="contacts__info">Some days i feel like i've been working on dlk my entire life
                 and there are other days that i am completely shocked 
                 that four years have flown by. It's simply magical.</p>
-            <iframe class="contacts__map" title="addresses of the DL Academy" src="https://yandex.ru/map-widget/v1/?um=constructor%3A689873499224e046273687afcc3578895048c3d32dcb467867882c7c743def20&amp;source=constructor" width="488" height="200" style="border:0;" loading="lazy"></iframe>
-        </article>
+            <div class="contacts__map"></div>
+            </article>
     </div>
     @@include('blocks/footer.html')
     @@include('blocks/popup.html')
     <script src="js/app.js" defer></script>
-    <script src="./js/popup.js"></script>
-    <script src="./js/banner.js"></script>
+    <script src="./js/index.js" defer></script>
     <script src="./js/burger.js"></script>
 </body> 
 </html>

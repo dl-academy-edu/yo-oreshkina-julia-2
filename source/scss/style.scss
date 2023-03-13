@@ -368,6 +368,9 @@
     }
   }
   &__map {
+    background-image: url('../img/map.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     position: absolute;
     left: 5%;
     height: auto;
